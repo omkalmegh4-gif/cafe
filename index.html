@@ -1,0 +1,4889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masala Café &amp; Boutique Hotels | Authentic Flavors &amp; Luxury Heritage Stays</title>
+  <meta name="description" content="Experience authentic Indian gastronomy, artisanal coffee, and boutique heritage hotel stays across Nagpur, Mumbai, Jaipur, Goa, and Munnar." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       MASALA CAFÉ & BOUTIQUE HOTELS - MODERN LUXURY DESIGN SYSTEM
+       ========================================================================== */
+
+    :root {
+      /* Warm Indian Luxury Palette */
+      --bg: #faf4eb;
+      --bg-gradient: radial-gradient(1200px 700px at 15% -10%, rgba(224, 119, 47, 0.16), transparent 55%),
+                     radial-gradient(900px 600px at 90% 0%, rgba(179, 82, 27, 0.14), transparent 60%),
+                     radial-gradient(1000px 700px at 50% 105%, rgba(25, 111, 91, 0.10), transparent 55%),
+                     linear-gradient(180deg, #fdfaf4 0%, #f6ecdc 100%);
+      --bg-card: rgba(255, 255, 255, 0.82);
+      --bg-card-solid: #ffffff;
+      --bg-subtle: rgba(179, 82, 27, 0.05);
+
+      --text-main: #211710;
+      --text-muted: #695345;
+      --text-light: #9e8374;
+
+      --brand: #b3521b;        /* Saffron Masala */
+      --brand-hover: #964213;
+      --brand-light: #e0772f;  /* Sunrise Amber */
+      --brand-soft: rgba(179, 82, 27, 0.10);
+      --brand-ring: rgba(179, 82, 27, 0.35);
+
+      --accent-green: #176854; /* Cardamom Emerald */
+      --accent-green-soft: rgba(23, 104, 84, 0.12);
+      --accent-gold: #c98b2c;  /* Turmeric Gold */
+      --accent-gold-soft: rgba(201, 139, 44, 0.14);
+      --accent-red: #d33c30;
+
+      --border: rgba(179, 82, 27, 0.14);
+      --border-focus: rgba(179, 82, 27, 0.45);
+      --border-light: rgba(0, 0, 0, 0.07);
+
+      --shadow-sm: 0 4px 12px rgba(33, 23, 16, 0.05);
+      --shadow-md: 0 12px 28px rgba(33, 23, 16, 0.08);
+      --shadow-lg: 0 24px 55px rgba(33, 23, 16, 0.12);
+      --shadow-card: 0 10px 24px rgba(179, 82, 27, 0.06);
+
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --radius-full: 9999px;
+
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+      --font-display: 'Outfit', sans-serif;
+
+      --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset & Defaults */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      min-height: 100vh;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--brand-ring);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Layout Utilities */
+    .wrap {
+      width: min(1200px, 92vw);
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .textCenter {
+      text-align: center;
+    }
+
+    .mxAuto {
+      margin-inline: auto;
+    }
+
+    /* Section Headings */
+    .sectionHeader {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .subBadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand);
+      background: var(--brand-soft);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+    }
+
+    .badgeWhite {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .sectionHeading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.2vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+
+    .sectionSub {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 640px;
+      margin-top: 10px;
+    }
+
+    /* Promo Announcement Banner */
+    .promoBanner {
+      background: linear-gradient(90deg, #873809, var(--brand), #c9681f);
+      color: #ffffff;
+      padding: 8px 16px;
+      font-size: 0.88rem;
+      position: relative;
+      z-index: 80;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .promoContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-weight: 600;
+    }
+
+    .promoBadge {
+      background: #ffffff;
+      color: var(--brand);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      font-family: monospace;
+    }
+
+    .promoClose {
+      font-size: 1.4rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1;
+      padding: 0 4px;
+      margin-left: 8px;
+      transition: transform var(--transition-fast), color var(--transition-fast);
+    }
+
+    .promoClose:hover {
+      color: #fff;
+      transform: scale(1.15);
+    }
+
+    /* Header & Topbar Navigation */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 70;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(250, 244, 235, 0.88);
+      border-bottom: 1px solid var(--border);
+      transition: all var(--transition-smooth);
+    }
+
+    .topbar.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow-md);
+    }
+
+    .topbarInner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brandMark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(179, 82, 27, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brandMark.small {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+    }
+
+    .brandMark::after {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.4), transparent);
+      animation: rotateShine 6s linear infinite;
+    }
+
+    @keyframes rotateShine {
+      to { transform: rotate(360deg); }
+    }
+
+    .brandEmblem {
+      position: relative;
+      z-index: 2;
+      font-size: 1.35rem;
+    }
+
+    .brandText h1 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .brandText small {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-top: 2px;
+    }
+
+    .desktopNav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .navLink {
+      padding: 8px 14px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-radius: var(--radius-full);
+      transition: all var(--transition-fast);
+    }
+
+    .navLink:hover {
+      color: var(--brand);
+      background: var(--brand-soft);
+      transform: translateY(-1px);
+    }
+
+    .navActions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cartBtn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: var(--card-solid);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast);
+      position: relative;
+    }
+
+    .cartBtn:hover {
+      border-color: var(--brand);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .cartBadge {
+      background: var(--brand);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 900;
+      padding: 2px 7px;
+      border-radius: var(--radius-full);
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .mobileMenuToggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    .mobileMenuToggle .bar {
+      width: 22px;
+      height: 2.5px;
+      background: var(--text-main);
+      border-radius: 4px;
+      transition: all var(--transition-fast);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 24px;
+      border-radius: var(--radius-md);
+      font-weight: 800;
+      font-size: 0.96rem;
+      letter-spacing: 0.01em;
+      transition: all var(--transition-fast);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btnPrimary {
+      background: linear-gradient(135deg, var(--brand), var(--brand-light));
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 22px rgba(179, 82, 27, 0.32);
+    }
+
+    .btnPrimary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(179, 82, 27, 0.42);
+      filter: brightness(1.05);
+    }
+
+    .btnSecondary {
+      background: var(--accent-green);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 22px rgba(23, 104, 84, 0.28);
+    }
+
+    .btnSecondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(23, 104, 84, 0.38);
+      filter: brightness(1.06);
+    }
+
+    .btnOutline {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(8px);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btnOutline:hover {
+      background: #ffffff;
+      border-color: var(--brand);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: var(--brand);
+    }
+
+    .btnTiny {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      border-radius: var(--radius-full);
+      background: #ffffff;
+      color: var(--brand);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast);
+    }
+
+    .btnTiny:hover {
+      background: var(--brand);
+      color: #ffffff;
+    }
+
+    .btnBadge {
+      background: rgba(255, 255, 255, 0.25);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .btnArrow {
+      font-size: 1.1rem;
+      transition: transform var(--transition-fast);
+    }
+
+    .btn:hover .btnArrow {
+      transform: translateX(3px);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 30px 0 60px;
+    }
+
+    .heroGrid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .heroCard {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .heroLeft {
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        radial-gradient(800px 400px at 0% 0%, rgba(224, 119, 47, 0.18), transparent 60%),
+        radial-gradient(600px 300px at 100% 100%, rgba(23, 104, 84, 0.10), transparent 60%),
+        rgba(255, 255, 255, 0.72);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      background: var(--brand-soft);
+      border: 1px solid var(--border);
+      color: var(--brand);
+      font-size: 0.85rem;
+      font-weight: 800;
+      width: fit-content;
+      letter-spacing: 0.02em;
+    }
+
+    .kickerDot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 5px var(--brand-soft);
+      animation: pulseDot 2.2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.75; }
+    }
+
+    .heroTitle {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin: 20px 0 16px;
+      color: var(--text-main);
+    }
+
+    .highlightText {
+      background: linear-gradient(135deg, var(--brand), var(--brand-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .heroSubtitle {
+      color: var(--text-muted);
+      font-size: 1.12rem;
+      line-height: 1.75;
+      font-weight: 500;
+      max-width: 580px;
+    }
+
+    .ctaRow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .heroStats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      transition: transform var(--transition-fast);
+    }
+
+    .stat:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--brand);
+      letter-spacing: -0.02em;
+    }
+
+    .stat span {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      line-height: 1.3;
+      margin-top: 2px;
+    }
+
+    .heroRight {
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(179, 82, 27, 0.08), rgba(23, 104, 84, 0.08));
+      display: flex;
+      flex-direction: column;
+    }
+
+    .heroVisualSlider {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .heroVisualCard {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      min-height: 310px;
+      flex: 1;
+      box-shadow: var(--shadow-md);
+    }
+
+    .heroVisualCard .heroImg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s ease;
+    }
+
+    .heroVisualCard:hover .heroImg {
+      transform: scale(1.04);
+    }
+
+    .heroCardOverlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(20,13,8,0.78) 100%);
+    }
+
+    .heroCardCap {
+      position: absolute;
+      inset-inline: 20px;
+      bottom: 20px;
+      color: #ffffff;
+      z-index: 2;
+    }
+
+    .heroCardCap h3 {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      margin: 8px 0 4px;
+    }
+
+    .heroCardCap p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+    }
+
+    .heroCardFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .heroPrice {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #ffdd94;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .tagAccent {
+      background: var(--accent-green);
+      color: #fff;
+    }
+
+    .miniHighlightsGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .miniTile {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .miniTile:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand);
+    }
+
+    .miniTileImg {
+      width: 58px;
+      height: 58px;
+      border-radius: var(--radius-sm);
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+    }
+
+    .miniTileContent {
+      overflow: hidden;
+    }
+
+    .badgeSmall {
+      font-size: 0.68rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--brand);
+      display: block;
+    }
+
+    .miniTileContent strong {
+      display: block;
+      font-size: 0.88rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--text-main);
+    }
+
+    .miniTileContent small {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    /* Hotels Grid */
+    .hotelsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 28px;
+    }
+
+    .hotelCard {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--bg-card-solid);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+      position: relative;
+    }
+
+    .hotelCard:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--brand-ring);
+    }
+
+    .hotelImgWrapper {
+      position: relative;
+      height: 230px;
+      overflow: hidden;
+    }
+
+    .hotelImg {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    .hotelCard:hover .hotelImg {
+      transform: scale(1.05);
+    }
+
+    .hotelBadge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(33, 23, 16, 0.75);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hotelRatingBadge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: #ffffff;
+      color: var(--brand);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 900;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hotelBody {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .hotelLocationTag {
+      color: var(--accent-green);
+      font-size: 0.85rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .hotelTitle {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .hotelDesc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .hotelAmenities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .amenityPill {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    .hotelFooter {
+      margin-top: auto;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .hotelPriceCol span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+    }
+
+    .hotelPriceCol strong {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--brand);
+    }
+
+    .hotelActions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .hotelActions .btn {
+      padding: 8px 14px;
+      font-size: 0.85rem;
+    }
+
+    /* Menu Section */
+    .menuSearchWrapper {
+      position: relative;
+      min-width: 320px;
+      max-width: 400px;
+    }
+
+    .menuSearchWrapper input {
+      width: 100%;
+      padding: 12px 38px 12px 42px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+      font-size: 0.92rem;
+      transition: all var(--transition-fast);
+    }
+
+    .menuSearchWrapper input:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 4px var(--brand-soft);
+    }
+
+    .searchIcon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: var(--text-light);
+      pointer-events: none;
+    }
+
+    .clearBtn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: var(--text-light);
+      padding: 4px;
+    }
+
+    .clearBtn:hover {
+      color: var(--text-main);
+    }
+
+    .menuControls {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .categoryScroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scrollbar-width: thin;
+    }
+
+    .catPill {
+      padding: 9px 18px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background: var(--bg-card-solid);
+      color: var(--text-muted);
+      font-weight: 800;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast);
+    }
+
+    .catPill:hover {
+      color: var(--brand);
+      border-color: var(--brand);
+      transform: translateY(-1px);
+    }
+
+    .catPill.active {
+      background: var(--brand);
+      color: #ffffff;
+      border-color: var(--brand);
+      box-shadow: 0 6px 16px rgba(179, 82, 27, 0.3);
+    }
+
+    .dietaryFilterGroup {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dietBtn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.7);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      transition: all var(--transition-fast);
+    }
+
+    .dietBtn:hover {
+      background: #ffffff;
+      color: var(--text-main);
+    }
+
+    .dietBtn.active {
+      background: var(--text-main);
+      color: #ffffff;
+      border-color: var(--text-main);
+    }
+
+    .dietDot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .vegDot {
+      background: #238848;
+      box-shadow: 0 0 0 2px rgba(35, 136, 72, 0.25);
+    }
+
+    .nonvegDot {
+      background: #c52929;
+      box-shadow: 0 0 0 2px rgba(197, 41, 41, 0.25);
+    }
+
+    .menuStatusRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .menuTip {
+      color: var(--brand);
+    }
+
+    .menuCards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 22px;
+    }
+
+    .foodCard {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--bg-card-solid);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+      position: relative;
+    }
+
+    .foodCard:hover {
+      transform: translateY(-4px);
+      border-color: var(--brand);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .foodImg {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .foodImg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4) 100%);
+    }
+
+    .foodDietBadge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      z-index: 2;
+    }
+
+    .dietIconSquare {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      border: 1.5px solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dietIconSquare.veg {
+      border-color: #238848;
+    }
+
+    .dietIconSquare.veg::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: #238848;
+      border-radius: 50%;
+    }
+
+    .dietIconSquare.nonveg {
+      border-color: #c52929;
+    }
+
+    .dietIconSquare.nonveg::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: #c52929;
+      border-radius: 50%;
+    }
+
+    .foodTagTop {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(33, 23, 16, 0.78);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: var(--radius-full);
+      z-index: 2;
+    }
+
+    .foodBody {
+      padding: 16px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .foodTop {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .foodName {
+      font-family: var(--font-serif);
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .foodPrice {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.12rem;
+      color: var(--brand);
+    }
+
+    .foodDesc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .foodMeta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+
+    .spiceLevel {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .foodActionBtn {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: var(--brand-soft);
+      color: var(--brand);
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+      font-weight: 800;
+      transition: all var(--transition-fast);
+    }
+
+    .foodActionBtn:hover {
+      background: var(--brand);
+      color: #ffffff;
+      transform: scale(1.04);
+    }
+
+    /* Reservations & Booking */
+    .bookingTabContainer {
+      max-width: 1060px;
+      margin-inline: auto;
+    }
+
+    .bookingTabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .tabBtn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      border: 2px solid var(--border);
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(8px);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      transition: all var(--transition-fast);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tabBtn:hover {
+      background: #ffffff;
+      color: var(--brand);
+      border-color: var(--brand);
+    }
+
+    .tabBtn.active {
+      background: var(--brand);
+      color: #ffffff;
+      border-color: var(--brand);
+      box-shadow: 0 10px 24px rgba(179, 82, 27, 0.32);
+    }
+
+    .tabIcon {
+      font-size: 1.25rem;
+    }
+
+    .bookingPanel {
+      animation: fadeIn 0.35s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .formWrap {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .panel {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      background: var(--bg-card-solid);
+      box-shadow: var(--shadow-md);
+      padding: 32px;
+    }
+
+    .panelTitle {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .panelSub {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+
+    form > div {
+      margin-bottom: 16px;
+    }
+
+    .formRow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: #ffffff;
+      padding: 12px 14px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      transition: all var(--transition-fast);
+    }
+
+    select {
+      cursor: pointer;
+    }
+
+    textarea {
+      min-height: 95px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--brand);
+      outline: none;
+      box-shadow: 0 0 0 4px var(--brand-soft);
+    }
+
+    .formPriceSummary {
+      background: var(--bg-subtle);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .formPriceSummary strong {
+      color: var(--brand);
+    }
+
+    .submitBtn {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.05rem;
+    }
+
+    .infoSidePanel {
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+    }
+
+    .infoSidePanel h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .perksList {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .perkItem {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .perkIcon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--brand-soft);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .perkItem strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .perkItem span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .directContactBox {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    .directContactBox strong {
+      display: block;
+      font-size: 0.92rem;
+      margin-bottom: 4px;
+    }
+
+    .directContactBox p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .phoneLink {
+      color: var(--brand);
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    /* Chefs */
+    .chefGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .chefCard {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--bg-card-solid);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+    }
+
+    .chefCard:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .chefImg {
+      height: 250px;
+      background-size: cover;
+      background-position: top center;
+      position: relative;
+    }
+
+    .chefImg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(20, 13, 8, 0.4) 100%);
+    }
+
+    .chefBody {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .chefRole {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--brand);
+      margin-bottom: 6px;
+    }
+
+    .chefName {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .chefBio {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .chefSpecialty {
+      margin-top: auto;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font-size: 0.82rem;
+      color: var(--text-main);
+    }
+
+    .chefSpecialty strong {
+      color: var(--brand);
+    }
+
+    .spiceStoryBanner {
+      background: linear-gradient(135deg, #1d1612 0%, #3a2215 100%);
+      color: #ffffff;
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .spiceStoryBanner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 90% 10%, rgba(224, 119, 47, 0.22), transparent 50%);
+    }
+
+    .spiceContent {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    .spiceContent h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+      margin: 10px 0 12px;
+    }
+
+    .spiceContent p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .spiceBadges {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .spicePill {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    /* Reviews */
+    .ratingSummaryCard {
+      background: var(--bg-card-solid);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-sm);
+      flex-wrap: wrap;
+    }
+
+    .ratingBig {
+      text-align: center;
+    }
+
+    .scoreNum {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: var(--brand);
+      line-height: 1;
+    }
+
+    .scoreStars {
+      color: var(--brand);
+      letter-spacing: 3px;
+      font-size: 1.25rem;
+      margin: 4px 0;
+    }
+
+    .scoreTotal {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .ratingBars {
+      flex: 1;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .barRow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .barRow span:first-child {
+      width: 150px;
+    }
+
+    .barTrack {
+      flex: 1;
+      height: 8px;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .barFill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand), var(--brand-light));
+      border-radius: 4px;
+    }
+
+    .reviewsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+    }
+
+    .reviewCard {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--bg-card-solid);
+      box-shadow: var(--shadow-card);
+      padding: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reviewHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .reviewStars {
+      color: var(--brand);
+      font-size: 1.05rem;
+      letter-spacing: 2px;
+    }
+
+    .reviewTypeTag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      background: var(--brand-soft);
+      color: var(--brand);
+    }
+
+    .reviewText {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .reviewAuthorRow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+
+    .authorAvatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--accent-green));
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .authorMeta strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .authorMeta small {
+      color: var(--text-light);
+      font-size: 0.8rem;
+    }
+
+    /* Locations & Map */
+    .branchPills {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 24px;
+    }
+
+    .branchPill {
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background: var(--bg-card-solid);
+      color: var(--text-muted);
+      font-weight: 800;
+      font-size: 0.92rem;
+      white-space: nowrap;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast);
+    }
+
+    .branchPill:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+
+    .branchPill.active {
+      background: var(--brand);
+      color: #ffffff;
+      border-color: var(--brand);
+      box-shadow: 0 8px 20px rgba(179, 82, 27, 0.3);
+    }
+
+    .locationDisplayGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .locationInfoPanel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .locTitle {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .locTagline {
+      color: var(--brand);
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .locDetailsList {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .locDetailItem {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .locIcon {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .locDetailItem strong {
+      display: block;
+      font-size: 0.92rem;
+    }
+
+    .locDetailItem span {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .mapPanel {
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    .mapFrame {
+      width: 100%;
+      height: 380px;
+      border: 0;
+      border-radius: var(--radius-lg);
+      filter: saturate(1.1);
+    }
+
+    /* Cart Drawer */
+    .cartDrawer {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      visibility: hidden;
+      transition: visibility var(--transition-smooth);
+    }
+
+    .cartDrawer.open {
+      visibility: visible;
+    }
+
+    .cartDrawerBackdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(33, 23, 16, 0.55);
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      transition: opacity var(--transition-smooth);
+    }
+
+    .cartDrawer.open .cartDrawerBackdrop {
+      opacity: 1;
+    }
+
+    .cartDrawerContainer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(440px, 100vw);
+      background: #ffffff;
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform var(--transition-smooth);
+    }
+
+    .cartDrawer.open .cartDrawerContainer {
+      transform: translateX(0);
+    }
+
+    .cartHeader {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cartHeaderTitle h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .cartSub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .cartCloseBtn {
+      font-size: 1.8rem;
+      color: var(--text-muted);
+      line-height: 1;
+      padding: 4px;
+    }
+
+    .cartCloseBtn:hover {
+      color: var(--text-main);
+    }
+
+    .cartBody {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cartEmptyNotice {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+    }
+
+    .cartEmptyNotice .emptyIcon {
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+    }
+
+    .cartItemRow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .cartItemImg {
+      width: 58px;
+      height: 58px;
+      border-radius: var(--radius-sm);
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+    }
+
+    .cartItemInfo {
+      flex: 1;
+    }
+
+    .cartItemTitle {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .cartItemPrice {
+      font-size: 0.88rem;
+      color: var(--brand);
+      font-weight: 800;
+    }
+
+    .qtyControl {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      padding: 2px 8px;
+    }
+
+    .qtyBtn {
+      font-weight: 900;
+      font-size: 1.05rem;
+      color: var(--text-main);
+      width: 20px;
+      text-align: center;
+    }
+
+    .qtyVal {
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
+
+    .cartFooter {
+      border-top: 1px solid var(--border);
+      padding: 20px 24px;
+      background: var(--bg);
+    }
+
+    .couponSection {
+      margin-bottom: 16px;
+    }
+
+    .couponInputGroup {
+      display: flex;
+      gap: 8px;
+    }
+
+    .couponInputGroup input {
+      padding: 8px 12px;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+    }
+
+    .couponInputGroup button {
+      padding: 8px 16px;
+      background: var(--text-main);
+      color: #fff;
+      border-radius: var(--radius-md);
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .couponFeedback {
+      font-size: 0.78rem;
+      margin-top: 4px;
+      font-weight: 700;
+    }
+
+    .cartBillSummary {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .billRow {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .discountRow {
+      color: var(--accent-green);
+      font-weight: 800;
+    }
+
+    .grandTotal {
+      font-size: 1.15rem;
+      color: var(--text-main);
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+      margin-top: 4px;
+    }
+
+    .checkoutBtn {
+      width: 100%;
+      padding: 14px;
+    }
+
+    /* Modals */
+    .modalBackdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 130;
+      background: rgba(26, 17, 11, 0.65);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-smooth);
+    }
+
+    .modalBackdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modalBox {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      max-width: 580px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      transform: scale(0.94);
+      transition: transform var(--transition-smooth);
+    }
+
+    .modalLarge {
+      max-width: 820px;
+    }
+
+    .modalBackdrop.open .modalBox {
+      transform: scale(1);
+    }
+
+    .modalCloseBtn {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      font-size: 1.8rem;
+      color: var(--text-muted);
+      line-height: 1;
+      z-index: 10;
+    }
+
+    .modalCloseBtn:hover {
+      color: var(--text-main);
+    }
+
+    .hotelModalHeaderImg {
+      height: 260px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hotelModalHeaderImg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(20,13,8,0.7) 100%);
+    }
+
+    .hotelModalInner {
+      padding: 28px 32px;
+    }
+
+    .hotelModalInner h2 {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      margin-bottom: 6px;
+    }
+
+    .roomTiersTable {
+      margin: 20px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .roomRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    .roomRow:last-child {
+      border-bottom: none;
+    }
+
+    .roomRow strong {
+      color: var(--brand);
+      font-size: 1rem;
+    }
+
+    .starPicker {
+      display: flex;
+      gap: 8px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+
+    .starPick {
+      color: #d1c4b8;
+      transition: color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .starPick.active {
+      color: #e0772f;
+    }
+
+    .starPick:hover {
+      transform: scale(1.15);
+    }
+
+    .reviewModalBody {
+      padding: 32px;
+    }
+
+    .reviewModalBody h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .reviewModalBody p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+
+    .successVoucher {
+      padding: 36px 32px;
+      text-align: center;
+    }
+
+    .voucherStamp {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--accent-green-soft);
+      color: var(--accent-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      margin: 0 auto 16px;
+      border: 2px solid var(--accent-green);
+    }
+
+    .voucherIdBadge {
+      display: inline-block;
+      background: var(--brand-soft);
+      color: var(--brand);
+      border: 1px dashed var(--brand);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      font-family: monospace;
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin: 12px 0 20px;
+    }
+
+    .voucherDetailsGrid {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      text-align: left;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      font-size: 0.88rem;
+    }
+
+    .voucherDetailsGrid div span {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .voucherDetailsGrid div strong {
+      color: var(--text-main);
+    }
+
+    .voucherActions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Toasts */
+    .toastContainer {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 150;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .toast {
+      pointer-events: auto;
+      background: var(--text-main);
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.92rem;
+      box-shadow: var(--shadow-lg);
+      border-left: 5px solid var(--brand);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: slideInToast 0.3s ease;
+      max-width: 360px;
+    }
+
+    @keyframes slideInToast {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    /* Floating Actions */
+    .floatingActions {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .floatCartBtn {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      position: relative;
+      transition: transform var(--transition-fast);
+    }
+
+    .floatCartBtn:hover {
+      transform: scale(1.08);
+    }
+
+    .floatCartBtn .cartBadge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+    }
+
+    .waBtn {
+      width: 58px;
+      height: 58px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      box-shadow: 0 16px 36px rgba(18, 140, 126, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      position: relative;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .waBtn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 22px 46px rgba(18, 140, 126, 0.48);
+    }
+
+    .waIcon {
+      font-size: 1.65rem;
+    }
+
+    .waTooltip {
+      position: absolute;
+      right: 70px;
+      background: #211710;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all var(--transition-fast);
+    }
+
+    .waBtn:hover .waTooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Mobile Drawer */
+    .mobileDrawer {
+      position: fixed;
+      inset: 0;
+      z-index: 110;
+      visibility: hidden;
+      transition: visibility var(--transition-smooth);
+    }
+
+    .mobileDrawer.open {
+      visibility: visible;
+    }
+
+    .mobileDrawerBackdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(33, 23, 16, 0.5);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: opacity var(--transition-smooth);
+    }
+
+    .mobileDrawer.open .mobileDrawerBackdrop {
+      opacity: 1;
+    }
+
+    .mobileDrawerContent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: min(320px, 85vw);
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(-100%);
+      transition: transform var(--transition-smooth);
+      padding: 24px;
+    }
+
+    .mobileDrawer.open .mobileDrawerContent {
+      transform: translateX(0);
+    }
+
+    .mobileDrawerHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .drawerCloseBtn {
+      font-size: 2rem;
+      color: var(--text-muted);
+      line-height: 1;
+    }
+
+    .mobileNavLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .mobileNavLink {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-main);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navPill {
+      font-size: 0.72rem;
+      background: var(--brand-soft);
+      color: var(--brand);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+    }
+
+    .mobileDrawerFooter {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    .mobileContactInfo {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    /* Footer */
+    .footer {
+      background: #19120e;
+      color: #f1e7de;
+      padding: 80px 0 30px;
+      position: relative;
+    }
+
+    .footerGrid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr 1.4fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footerBrand .brandMark {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    }
+
+    .footerBrand h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: #ffffff;
+    }
+
+    .footerAbout {
+      color: #b7a497;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin: 16px 0 20px;
+    }
+
+    .socialRow {
+      display: flex;
+      gap: 10px;
+    }
+
+    .socialLink {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      transition: all var(--transition-fast);
+    }
+
+    .socialLink:hover {
+      background: var(--brand);
+      transform: translateY(-2px);
+    }
+
+    .footerCol h4 {
+      font-family: var(--font-serif);
+      color: #ffffff;
+      font-size: 1.15rem;
+      margin-bottom: 20px;
+    }
+
+    .footerLinks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footerLinks a {
+      color: #b7a497;
+      font-size: 0.92rem;
+      transition: color var(--transition-fast);
+    }
+
+    .footerLinks a:hover {
+      color: var(--brand-light);
+      padding-left: 4px;
+    }
+
+    .footerText {
+      color: #b7a497;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
+    .newsletterForm {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .newsletterForm input {
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      font-size: 0.88rem;
+    }
+
+    .newsletterForm button {
+      padding: 10px 18px;
+      background: var(--brand);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      font-weight: 800;
+      font-size: 0.88rem;
+      transition: background var(--transition-fast);
+    }
+
+    .newsletterForm button:hover {
+      background: var(--brand-light);
+    }
+
+    .footerBadge {
+      font-size: 0.8rem;
+      color: #b7a497;
+    }
+
+    .footerBottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: #928073;
+    }
+
+    .footerLegal {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 1080px) {
+      .heroGrid { grid-template-columns: 1fr; }
+      .heroVisualSlider { min-height: 380px; }
+      .formWrap { grid-template-columns: 1fr; }
+      .locationDisplayGrid { grid-template-columns: 1fr; }
+      .chefGrid { grid-template-columns: repeat(2, 1fr); }
+      .footerGrid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 860px) {
+      .desktopNav, .bookCtaBtn { display: none; }
+      .mobileMenuToggle { display: flex; }
+      .section { padding: 60px 0; }
+      .heroLeft { padding: 30px 24px; }
+      .heroStats { grid-template-columns: repeat(2, 1fr); }
+      .chefGrid { grid-template-columns: 1fr; }
+      .spiceStoryBanner { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 600px) {
+      .heroStats { grid-template-columns: 1fr 1fr; }
+      .formRow { grid-template-columns: 1fr; }
+      .voucherDetailsGrid { grid-template-columns: 1fr; }
+      .footerGrid { grid-template-columns: 1fr; }
+      .bookingTabs { flex-direction: column; width: 100%; }
+      .tabBtn { width: 100%; justify-content: center; }
+      .ratingSummaryCard { flex-direction: column; align-items: center; text-align: center; }
+      .barRow { flex-direction: column; align-items: flex-start; gap: 4px; }
+      .barRow span:first-child { width: 100%; }
+      .barTrack { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP PROMO BANNER -->
+  <div class="promoBanner" id="promoBanner">
+    <div class="wrap promoContent">
+      <span>✨ Festive Hospitality Offer: Get <strong>10% OFF</strong> dining &amp; hotel stays with code <code class="promoBadge">MASALA10</code></span>
+      <button class="promoClose" id="promoCloseBtn" aria-label="Close Announcement">&times;</button>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="topbar" id="mainHeader">
+    <div class="wrap topbarInner">
+      <a href="#home" class="brand" aria-label="Masala Café and Boutique Hotels Home">
+        <div class="brandMark" aria-hidden="true">
+          <div class="brandEmblem">☕</div>
+        </div>
+        <div class="brandText">
+          <h1>Masala Café</h1>
+          <small>Kitchen &amp; Boutique Stays</small>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktopNav" aria-label="Primary">
+        <a class="navLink" href="#home">Home</a>
+        <a class="navLink" href="#hotels">Hotels &amp; Stays</a>
+        <a class="navLink" href="#menu">Menu &amp; Order</a>
+        <a class="navLink" href="#booking">Reserve &amp; Book</a>
+        <a class="navLink" href="#chefs">Chefs</a>
+        <a class="navLink" href="#reviews">Reviews</a>
+        <a class="navLink" href="#contact">Locations</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="navActions">
+        <button class="cartBtn" id="openCartBtn" aria-label="View Shopping Cart">
+          <span class="cartIcon">🛍️</span>
+          <span class="cartText">Cart</span>
+          <span class="cartBadge" id="cartCountBadge">0</span>
+        </button>
+
+        <a href="#booking" class="btn btnPrimary bookCtaBtn">
+          <span>Book Table / Room</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobileMenuToggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div class="mobileDrawer" id="mobileDrawer">
+    <div class="mobileDrawerBackdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobileDrawerContent">
+      <div class="mobileDrawerHeader">
+        <div class="brand">
+          <div class="brandMark small"><div class="brandEmblem">☕</div></div>
+          <div>
+            <strong>Masala Café</strong>
+            <small>Kitchen &amp; Stays</small>
+          </div>
+        </div>
+        <button class="drawerCloseBtn" id="drawerCloseBtn">&times;</button>
+      </div>
+
+      <nav class="mobileNavLinks">
+        <a class="mobileNavLink" href="#home">Home</a>
+        <a class="mobileNavLink" href="#hotels">Hotels &amp; Stays <span class="navPill">5 Cities</span></a>
+        <a class="mobileNavLink" href="#menu">Culinary Menu &amp; Order</a>
+        <a class="mobileNavLink" href="#booking">Reserve Table / Hotel</a>
+        <a class="mobileNavLink" href="#chefs">Master Chefs</a>
+        <a class="mobileNavLink" href="#reviews">Guest Reviews</a>
+        <a class="mobileNavLink" href="#contact">Our Locations &amp; Map</a>
+      </nav>
+
+      <div class="mobileDrawerFooter">
+        <a href="#booking" class="btn btnPrimary" style="width:100%;" id="mobileBookBtn">Instant Reservation</a>
+        <div class="mobileContactInfo">
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Nagpur • Mumbai • Jaipur • Goa • Munnar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero wrap section" id="home">
+    <div class="heroGrid">
+      <div class="heroCard heroLeft">
+        <div class="kicker">
+          <span class="kickerDot" aria-hidden="true"></span>
+          Authentic Indian Gastronomy &amp; Boutique Hospitality
+        </div>
+
+        <h2 class="heroTitle">
+          Where Heritage Spices Meet <span class="highlightText">Luxury Stays</span>
+        </h2>
+
+        <p class="heroSubtitle">
+          Welcome to Masala Café &amp; Boutique Stays. Immerse your senses in royal dum recipes,
+          hand-pulled artisanal coffees, and handpicked luxury heritage suites across 5 breathtaking Indian destinations.
+        </p>
+
+        <div class="ctaRow">
+          <a href="#menu" class="btn btnPrimary">
+            <span>Explore Menu &amp; Order</span>
+            <span class="btnArrow">→</span>
+          </a>
+          <a href="#hotels" class="btn btnSecondary">
+            <span>Discover Stays</span>
+            <span class="btnBadge">5 Properties</span>
+          </a>
+          <a href="#booking" class="btn btnOutline">
+            <span>Reserve Table / Room</span>
+          </a>
+        </div>
+
+        <div class="heroStats" aria-label="Restaurant and hotel highlights">
+          <div class="stat">
+            <strong>5000+</strong>
+            <span>Delighted Guests</span>
+          </div>
+          <div class="stat">
+            <strong>5 Cities</strong>
+            <span>Boutique Hotels &amp; Cafés</span>
+          </div>
+          <div class="stat">
+            <strong>60+</strong>
+            <span>Handcrafted Dishes</span>
+          </div>
+          <div class="stat">
+            <strong>4.9 ★</strong>
+            <span>Google &amp; TripAdvisor</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Right -->
+      <div class="heroCard heroRight" aria-label="Featured culinary and stays showcase">
+        <div class="heroVisualSlider">
+          <div class="heroVisualCard active">
+            <div class="heroImg" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80')"></div>
+            <div class="heroCardOverlay"></div>
+            <div class="heroCardCap">
+              <span class="tag tagAccent">Featured Stay</span>
+              <h3>Masala Heritage Manor</h3>
+              <p>Colonial Suites &amp; Courtyard Dining in Nagpur</p>
+              <div class="heroCardFooter">
+                <span class="heroPrice">From ₹3,899 / night</span>
+                <a href="#hotels" class="btnTiny">View Stay</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="miniHighlightsGrid">
+            <div class="miniTile" onclick="window.location.hash='#menu'">
+              <div class="miniTileImg" style="background-image:url('https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80')"></div>
+              <div class="miniTileContent">
+                <span class="badgeSmall">Best Seller</span>
+                <strong>Butter Chicken Deluxe</strong>
+                <small>₹340 • Slow Simmered</small>
+              </div>
+            </div>
+
+            <div class="miniTile" onclick="window.location.hash='#hotels'">
+              <div class="miniTileImg" style="background-image:url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80')"></div>
+              <div class="miniTileContent">
+                <span class="badgeSmall">Seafront Luxury</span>
+                <strong>The Spice Bay Suites</strong>
+                <small>Mumbai • Ocean Facing</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: BOUTIQUE HOTELS & HERITAGE STAYS -->
+  <section class="section wrap" id="hotels">
+    <div class="sectionHeader">
+      <div>
+        <div class="subBadge">EXCLUSIVE HOSPITALITY</div>
+        <h2 class="sectionHeading">Our Boutique Hotels &amp; Luxury Stays</h2>
+        <p class="sectionSub">
+          Indulge in handcrafted luxury. Each property features architectural elegance, lush amenities,
+          and our signature Masala Café restaurant right on the premises.
+        </p>
+      </div>
+      <div class="headerActions">
+        <a href="#booking" class="btn btnOutline" onclick="switchToBookingTab('hotel')">Book a Room Stay</a>
+      </div>
+    </div>
+
+    <!-- Hotels Grid -->
+    <div class="hotelsGrid" id="hotelsGridContainer"></div>
+  </section>
+
+  <!-- SECTION: INTERACTIVE DIGITAL MENU & ONLINE ORDERING -->
+  <section class="section wrap" id="menu">
+    <div class="sectionHeader">
+      <div>
+        <div class="subBadge">FARM TO TABLE GASTRONOMY</div>
+        <h2 class="sectionHeading">Our Handcrafted Culinary Menu</h2>
+        <p class="sectionSub">
+          Prepared fresh with slow-roasted spices from Kerala, fragrant basmati, and cold-pressed oils.
+          Filter by preference or add directly to your order cart!
+        </p>
+      </div>
+
+      <!-- Menu Search Bar -->
+      <div class="menuSearchWrapper">
+        <span class="searchIcon">🔍</span>
+        <input type="text" id="menuSearchInput" placeholder="Search dishes (e.g., Biryani, Dosa, Filter Coffee)..." />
+        <button id="clearSearchBtn" class="clearBtn" style="display:none;">&times;</button>
+      </div>
+    </div>
+
+    <!-- Menu Controls: Categories & Dietary Filters -->
+    <div class="menuControls">
+      <div class="categoryScroll" id="categoryFilterContainer">
+        <button class="catPill active" data-cat="all">All Specialties</button>
+        <button class="catPill" data-cat="starters">Starters &amp; Chaat</button>
+        <button class="catPill" data-cat="south">South Indian</button>
+        <button class="catPill" data-cat="north">North Indian Mains</button>
+        <button class="catPill" data-cat="biryani">Dum Biryani &amp; Breads</button>
+        <button class="catPill" data-cat="cafe">Artisanal Café</button>
+        <button class="catPill" data-cat="desserts">Royal Desserts</button>
+      </div>
+
+      <div class="dietaryFilterGroup">
+        <button class="dietBtn active" data-diet="all">All</button>
+        <button class="dietBtn" data-diet="veg"><span class="dietDot vegDot"></span> Pure Veg</button>
+        <button class="dietBtn" data-diet="nonveg"><span class="dietDot nonvegDot"></span> Non-Veg</button>
+        <button class="dietBtn" data-diet="special">⭐ Chef's Special</button>
+      </div>
+    </div>
+
+    <!-- Active Menu Counter -->
+    <div class="menuStatusRow">
+      <span id="menuCountLabel">Showing dishes</span>
+      <span class="menuTip">💡 Tip: Click "+ Add" to build your order cart with live discounts</span>
+    </div>
+
+    <!-- Menu Cards Grid -->
+    <div class="menuCards" id="menuCardsContainer"></div>
+  </section>
+
+  <!-- SECTION: DUAL RESERVATION & BOOKING ENGINE -->
+  <section class="section wrap" id="booking">
+    <div class="sectionHeader textCenter">
+      <div>
+        <div class="subBadge">SEAMLESS RESERVATIONS</div>
+        <h2 class="sectionHeading">Book Table or Hotel Stay</h2>
+        <p class="sectionSub mxAuto">
+          Reserve your gourmet dining experience or book an idyllic getaway at any of our 5 luxury properties.
+          Instant confirmation with WhatsApp booking pass.
+        </p>
+      </div>
+    </div>
+
+    <!-- Booking Switcher Tabs -->
+    <div class="bookingTabContainer">
+      <div class="bookingTabs" role="tablist">
+        <button class="tabBtn active" id="tabDiningBtn" role="tab" aria-selected="true" onclick="switchBookingTab('dining')">
+          <span class="tabIcon">🍽️</span>
+          <span>Reserve a Dining Table</span>
+        </button>
+        <button class="tabBtn" id="tabHotelBtn" role="tab" aria-selected="false" onclick="switchBookingTab('hotel')">
+          <span class="tabIcon">🏨</span>
+          <span>Book a Boutique Hotel Stay</span>
+        </button>
+      </div>
+
+      <!-- DINING RESERVATION PANEL -->
+      <div class="bookingPanel" id="diningPanel">
+        <div class="formWrap">
+          <div class="panel formCard">
+            <h3 class="panelTitle">🍽️ Table Reservation Details</h3>
+            <p class="panelSub">Reserve a table at our café &amp; courtyard restaurant.</p>
+
+            <form id="diningBookingForm">
+              <div class="formRow">
+                <div>
+                  <label for="diningName">Full Name *</label>
+                  <input type="text" id="diningName" placeholder="e.g. Aditi Sharma" required />
+                </div>
+                <div>
+                  <label for="diningPhone">Phone Number (WhatsApp) *</label>
+                  <input type="tel" id="diningPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" required />
+                </div>
+              </div>
+
+              <div class="formRow">
+                <div>
+                  <label for="diningBranch">Select Location *</label>
+                  <select id="diningBranch" required>
+                    <option value="Nagpur">Nagpur - Heritage Manor &amp; Café</option>
+                    <option value="Mumbai">Mumbai - The Spice Bay Seafront Bistro</option>
+                    <option value="Jaipur">Jaipur - Royal Haveli Palace &amp; Rasoi</option>
+                    <option value="Goa">Goa - The Palms Beachside Sanctuary</option>
+                    <option value="Munnar">Munnar - Misty Hills Plantation Café</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="diningGuests">Number of Guests *</label>
+                  <select id="diningGuests" required>
+                    <option value="1">1 Person (Solo Dining)</option>
+                    <option value="2" selected>2 Persons (Couple Table)</option>
+                    <option value="4">4 Persons (Family Table)</option>
+                    <option value="6">6 Persons (Private Dining)</option>
+                    <option value="8+">8+ Persons (Grand Celebration)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="formRow">
+                <div>
+                  <label for="diningDate">Date *</label>
+                  <input type="date" id="diningDate" required />
+                </div>
+                <div>
+                  <label for="diningTime">Time Slot *</label>
+                  <select id="diningTime" required>
+                    <option value="10:00 AM - Breakfast">10:00 AM - Breakfast / Kaapi</option>
+                    <option value="12:30 PM - Lunch" selected>12:30 PM - Afternoon Lunch</option>
+                    <option value="02:00 PM - Lunch">02:00 PM - Late Lunch</option>
+                    <option value="05:00 PM - High Tea">05:00 PM - Royal High Tea</option>
+                    <option value="07:30 PM - Dinner">07:30 PM - Evening Dinner</option>
+                    <option value="09:00 PM - Dinner">09:00 PM - Candlelight Dinner</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="formRow">
+                <div>
+                  <label for="diningSeating">Seating Preference</label>
+                  <select id="diningSeating">
+                    <option value="Courtyard Garden">Courtyard Garden (Open-Air)</option>
+                    <option value="AC Royal Lounge">AC Royal Lounge</option>
+                    <option value="Rooftop Terrace">Rooftop Terrace</option>
+                    <option value="Chef's Counter">Chef's Tasting Counter</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="diningOccasion">Special Occasion</label>
+                  <select id="diningOccasion">
+                    <option value="Casual Dining">Casual Dining</option>
+                    <option value="Birthday Celebration">Birthday Celebration</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Business Meeting">Business Meeting</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="diningNotes">Dietary Notes / Special Requests</label>
+                <textarea id="diningNotes" placeholder="E.g., Less spicy, Jain preparation, high chair needed, anniversary cake request..."></textarea>
+              </div>
+
+              <button class="btn btnPrimary submitBtn" type="submit">
+                <span>Confirm Table Reservation</span>
+                <span class="btnArrow">→</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Dining perks sidebar -->
+          <div class="panel infoSidePanel">
+            <h3>🌟 Dining Perks</h3>
+            <div class="perksList">
+              <div class="perkItem">
+                <div class="perkIcon">☕</div>
+                <div>
+                  <strong>Complimentary Welcome Brew</strong>
+                  <span>Fresh traditional cardamom filter kaapi or spiced kokum cooler on arrival.</span>
+                </div>
+              </div>
+              <div class="perkItem">
+                <div class="perkIcon">⏰</div>
+                <div>
+                  <strong>Guaranteed Seating</strong>
+                  <span>Tables held for 20 minutes past reservation time with zero queue wait.</span>
+                </div>
+              </div>
+              <div class="perkItem">
+                <div class="perkIcon">🌿</div>
+                <div>
+                  <strong>Custom Dietary Care</strong>
+                  <span>Dedicated Jain, Gluten-free, and Vegan menus curated on request.</span>
+                </div>
+              </div>
+              <div class="perkItem">
+                <div class="perkIcon">📱</div>
+                <div>
+                  <strong>Instant WhatsApp Ticket</strong>
+                  <span>Receive booking ID, live direction map, and digital bill updates.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="directContactBox">
+              <strong>Need Immediate Assistance?</strong>
+              <p>Call our central concierge desk directly:</p>
+              <a href="tel:+919876543210" class="phoneLink">📞 +91 98765 43210</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOTEL STAY BOOKING PANEL -->
+      <div class="bookingPanel" id="hotelPanel" style="display:none;">
+        <div class="formWrap">
+          <div class="panel formCard">
+            <h3 class="panelTitle">🏨 Luxury Hotel Stay Booking</h3>
+            <p class="panelSub">Book your boutique room or royal suite with complimentary gourmet breakfast.</p>
+
+            <form id="hotelBookingForm">
+              <div class="formRow">
+                <div>
+                  <label for="hotelName">Guest Full Name *</label>
+                  <input type="text" id="hotelName" placeholder="e.g. Vikramaditya Rathore" required />
+                </div>
+                <div>
+                  <label for="hotelPhone">Phone Number (WhatsApp) *</label>
+                  <input type="tel" id="hotelPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" required />
+                </div>
+              </div>
+
+              <div class="formRow">
+                <div>
+                  <label for="hotelProperty">Choose Boutique Hotel *</label>
+                  <select id="hotelProperty" required onchange="updateRoomTypesBasedOnHotel()">
+                    <option value="nagpur">Masala Heritage Manor &amp; Café (Nagpur) - ₹3,899/night</option>
+                    <option value="mumbai">The Spice Bay Suites &amp; Bistro (Mumbai) - ₹5,499/night</option>
+                    <option value="jaipur">Royal Haveli Palace &amp; Rasoi (Jaipur) - ₹4,799/night</option>
+                    <option value="goa">The Palms Spice Sanctuary (Goa) - ₹4,299/night</option>
+                    <option value="munnar">Misty Hills Tea &amp; Spice Resort (Munnar) - ₹3,999/night</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="hotelRoomType">Select Room Tier *</label>
+                  <select id="hotelRoomType" required>
+                    <option value="Heritage Deluxe Room">Heritage Deluxe Room</option>
+                    <option value="Royal Courtyard Suite">Royal Courtyard Suite (+₹2,500)</option>
+                    <option value="Presidential Villa">Presidential Garden Villa (+₹4,500)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="formRow">
+                <div>
+                  <label for="hotelCheckIn">Check-In Date *</label>
+                  <input type="date" id="hotelCheckIn" required />
+                </div>
+                <div>
+                  <label for="hotelCheckOut">Check-Out Date *</label>
+                  <input type="date" id="hotelCheckOut" required />
+                </div>
+              </div>
+
+              <div class="formRow">
+                <div>
+                  <label for="hotelGuests">Guests &amp; Rooms *</label>
+                  <select id="hotelGuests" required>
+                    <option value="1 Guest, 1 Room">1 Guest, 1 Room</option>
+                    <option value="2 Guests, 1 Room" selected>2 Guests, 1 Room</option>
+                    <option value="3 Guests, 1 Room">3 Guests, 1 Room (Extra Bed)</option>
+                    <option value="4 Guests, 2 Rooms">4 Guests, 2 Rooms</option>
+                    <option value="Family Suite (4-6 Guests)">Family Suite (4-6 Guests)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="hotelPlan">Meal Inclusions</label>
+                  <select id="hotelPlan">
+                    <option value="Bed & Breakfast">CP - Room + Royal Gourmet Breakfast (Included)</option>
+                    <option value="Modified American (Breakfast + Lunch/Dinner)">MAP - Breakfast + 3-Course Dinner (+₹1,200)</option>
+                    <option value="All Inclusive (All Meals + Hi-Tea)">AP - All Meals + High Tea &amp; Spa Credits (+₹2,200)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="hotelNotes">Special Requests &amp; Arrival Time</label>
+                <textarea id="hotelNotes" placeholder="E.g., Early check-in (11 AM), airport cab pickup needed, honeymoon floral setup..."></textarea>
+              </div>
+
+              <div class="formPriceSummary" id="hotelCalculatedSummary">
+                <span>Estimated Stay: <strong id="hotelStayDays">1 Night</strong> • Starting Rate: <strong id="hotelEstPrice">₹3,899</strong></span>
+              </div>
+
+              <button class="btn btnPrimary submitBtn" type="submit">
+                <span>Confirm Hotel Stay Booking</span>
+                <span class="btnArrow">→</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Hotel perks sidebar -->
+          <div class="panel infoSidePanel">
+            <h3>🏰 Luxury Stay Inclusions</h3>
+            <div class="perksList">
+              <div class="perkItem">
+                <div class="perkIcon">🍳</div>
+                <div>
+                  <strong>Signature Royal Breakfast</strong>
+                  <span>Lavish morning spread featuring artisanal breads, dosas, parathas, and single-origin coffee.</span>
+                </div>
+              </div>
+              <div class="perkItem">
+                <div class="perkIcon">🏊</div>
+                <div>
+                  <strong>Resort &amp; Spa Access</strong>
+                  <span>Access to temperature-controlled pools, herbal steam, and evening musical soirees.</span>
+                </div>
+              </div>
+              <div class="perkItem">
+                <div class="perkIcon">📶</div>
+                <div>
+                  <strong>High-Speed Fibre &amp; Work Desks</strong>
+                  <span>Stay seamlessly connected with 300+ Mbps Wi-Fi and ergonomic workspaces.</span>
+                </div>
+              </div>
+              <div class="perkItem">
+                <div class="perkIcon">🛡️</div>
+                <div>
+                  <strong>Free Flexible Cancellation</strong>
+                  <span>Cancel without fee up to 48 hours prior to scheduled check-in.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="directContactBox">
+              <strong>Need Group or Corporate Stays?</strong>
+              <p>Direct hospitality concierge hotline:</p>
+              <a href="tel:+919876543210" class="phoneLink">📞 +91 98765 43210</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: MASTER CHEFS & CULINARY PHILOSOPHY -->
+  <section class="section wrap" id="chefs">
+    <div class="sectionHeader">
+      <div>
+        <div class="subBadge">CULINARY ARTISTRY</div>
+        <h2 class="sectionHeading">Meet Our Culinary Masters</h2>
+        <p class="sectionSub">
+          Crafted by revered chefs who blend generational spice lore with contemporary gastronomy.
+        </p>
+      </div>
+    </div>
+
+    <div class="chefGrid">
+      <div class="chefCard">
+        <div class="chefImg" style="background-image:url('https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="chefBody">
+          <div class="chefRole">Executive Head Chef</div>
+          <h3 class="chefName">Chef Arjun Kapoor</h3>
+          <p class="chefBio">
+            With 15+ years across Michelin-pedigree kitchens in Delhi and London, Chef Arjun oversees our signature slow-simmered gravies, charcoal tandoor, and secret masala blends.
+          </p>
+          <div class="chefSpecialty">
+            <strong>Signature Dish:</strong> 24-Hour Charcoal Dal Makhani &amp; Old Delhi Butter Chicken
+          </div>
+        </div>
+      </div>
+
+      <div class="chefCard">
+        <div class="chefImg" style="background-image:url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="chefBody">
+          <div class="chefRole">Master Patissier &amp; Beverage Director</div>
+          <h3 class="chefName">Chef Priya Nair</h3>
+          <p class="chefBio">
+            Trained in classical French patisserie and South Indian bean-to-cup brewing. She curates our artisanal Araku coffee roasts and decadent Indian fusion desserts.
+          </p>
+          <div class="chefSpecialty">
+            <strong>Signature Dish:</strong> Rasmalai Tres Leches &amp; Spiced Cardamom Cold Brew
+          </div>
+        </div>
+      </div>
+
+      <div class="chefCard">
+        <div class="chefImg" style="background-image:url('https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80')"></div>
+        <div class="chefBody">
+          <div class="chefRole">Heritage South Indian Specialist</div>
+          <h3 class="chefName">Chef Ramesh Iyer</h3>
+          <p class="chefBio">
+            Hailing from Madurai with over two decades of culinary mastery in traditional fermentation, stone-ground podis, and Chettinad earthen pot curries.
+          </p>
+          <div class="chefSpecialty">
+            <strong>Signature Dish:</strong> Ghee Roast Podi Dosa &amp; Chettinad Pepper Curry
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spice Story Featurette -->
+    <div class="spiceStoryBanner">
+      <div class="spiceContent">
+        <span class="subBadge badgeWhite">THE MASALA PHILOSOPHY</span>
+        <h3>Direct From Cardamom Hills To Your Plate</h3>
+        <p>
+          We source small-batch single-origin spices directly from organic estates in Idukki, Kerala,
+          cold-press our mustard oil in Punjab, and roast Arabica beans from Andhra's Araku tribal valley.
+          Zero preservatives, zero artificial colorants — just pure aromatic alchemy.
+        </p>
+      </div>
+      <div class="spiceBadges">
+        <div class="spicePill">🌱 100% Organic Spices</div>
+        <div class="spicePill">🧈 Pure A2 Desi Ghee</div>
+        <div class="spicePill">🪵 Charcoal Dum Cooking</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: VERIFIED REVIEWS & USER FEEDBACK -->
+  <section class="section wrap" id="reviews">
+    <div class="sectionHeader">
+      <div>
+        <div class="subBadge">GUEST EXPERIENCES</div>
+        <h2 class="sectionHeading">Stories From Our Diners &amp; Guests</h2>
+        <p class="sectionSub">
+          Over 5,000 guests have dined and stayed with us. Read verified impressions or share your own experience.
+        </p>
+      </div>
+      <div class="headerActions">
+        <button class="btn btnPrimary" id="openReviewModalBtn">✍️ Write a Review</button>
+      </div>
+    </div>
+
+    <!-- Rating Summary Bar -->
+    <div class="ratingSummaryCard">
+      <div class="ratingBig">
+        <span class="scoreNum">4.9</span>
+        <div class="scoreStars">★★★★★</div>
+        <span class="scoreTotal">Based on 1,480+ verified reviews</span>
+      </div>
+
+      <div class="ratingBars">
+        <div class="barRow">
+          <span>Food &amp; Flavors</span>
+          <div class="barTrack"><div class="barFill" style="width:98%;"></div></div>
+          <span>4.9 / 5</span>
+        </div>
+        <div class="barRow">
+          <span>Hotel Ambience &amp; Suites</span>
+          <div class="barTrack"><div class="barFill" style="width:96%;"></div></div>
+          <span>4.8 / 5</span>
+        </div>
+        <div class="barRow">
+          <span>Hospitality &amp; Service</span>
+          <div class="barTrack"><div class="barFill" style="width:99%;"></div></div>
+          <span>5.0 / 5</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Grid -->
+    <div class="reviewsGrid" id="reviewsGridContainer"></div>
+  </section>
+
+  <!-- SECTION: LOCATIONS, BRANCHES & INTERACTIVE MAP -->
+  <section class="section wrap" id="contact">
+    <div class="sectionHeader">
+      <div>
+        <div class="subBadge">FIND US ACROSS INDIA</div>
+        <h2 class="sectionHeading">Our Café &amp; Hotel Locations</h2>
+        <p class="sectionSub">
+          Select a city below to view property details, contact numbers, and live directions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Branch Selector Pills -->
+    <div class="branchPills" id="branchPillsContainer">
+      <button class="branchPill active" data-branch="nagpur">📍 Nagpur (Flagship)</button>
+      <button class="branchPill" data-branch="mumbai">📍 Mumbai (Colaba)</button>
+      <button class="branchPill" data-branch="jaipur">📍 Jaipur (Pink City)</button>
+      <button class="branchPill" data-branch="goa">📍 Goa (Anjuna)</button>
+      <button class="branchPill" data-branch="munnar">📍 Munnar (Devikulam)</button>
+    </div>
+
+    <div class="locationDisplayGrid">
+      <div class="panel locationInfoPanel" id="branchDetailsBox"></div>
+
+      <div class="panel mapPanel">
+        <iframe
+          id="googleMapFrame"
+          class="mapFrame"
+          src="https://maps.google.com/maps?q=Civil+Lines+Nagpur+Maharashtra&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Masala Café and Boutique Hotels interactive map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOPPING CART DRAWER -->
+  <div class="cartDrawer" id="cartDrawer">
+    <div class="cartDrawerBackdrop" id="cartDrawerBackdrop"></div>
+    <div class="cartDrawerContainer">
+      <div class="cartHeader">
+        <div class="cartHeaderTitle">
+          <h3>Your Order Cart</h3>
+          <span class="cartSub" id="cartItemsCountText">0 items selected</span>
+        </div>
+        <button class="cartCloseBtn" id="cartCloseBtn">&times;</button>
+      </div>
+
+      <div class="cartBody" id="cartBody"></div>
+
+      <div class="cartFooter" id="cartFooter">
+        <div class="couponSection">
+          <div class="couponInputGroup">
+            <input type="text" id="couponInput" placeholder="Enter coupon code (MASALA10)" />
+            <button id="applyCouponBtn">Apply</button>
+          </div>
+          <div class="couponFeedback" id="couponFeedback"></div>
+        </div>
+
+        <div class="cartBillSummary">
+          <div class="billRow">
+            <span>Item Subtotal</span>
+            <span id="billSubtotal">₹0</span>
+          </div>
+          <div class="billRow discountRow" id="billDiscountRow" style="display:none;">
+            <span>Promo Discount</span>
+            <span id="billDiscount">-₹0</span>
+          </div>
+          <div class="billRow">
+            <span>Restaurant GST &amp; Taxes (5%)</span>
+            <span id="billGst">₹0</span>
+          </div>
+          <div class="billRow grandTotal">
+            <strong>Total Amount</strong>
+            <strong id="billTotal">₹0</strong>
+          </div>
+        </div>
+
+        <button class="btn btnPrimary checkoutBtn" id="checkoutBtn" disabled>
+          <span>Proceed To Checkout</span>
+          <span class="btnArrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOTEL DETAILS MODAL -->
+  <div class="modalBackdrop" id="hotelModal">
+    <div class="modalBox modalLarge">
+      <button class="modalCloseBtn" id="hotelModalCloseBtn">&times;</button>
+      <div class="hotelModalContent" id="hotelModalContent"></div>
+    </div>
+  </div>
+
+  <!-- WRITE A REVIEW MODAL -->
+  <div class="modalBackdrop" id="reviewModal">
+    <div class="modalBox">
+      <button class="modalCloseBtn" id="reviewModalCloseBtn">&times;</button>
+      <div class="reviewModalBody">
+        <h3>Share Your Masala Experience</h3>
+        <p>Tell other diners and travelers about the taste, stay, and service.</p>
+
+        <form id="submitReviewForm">
+          <div>
+            <label for="revName">Your Name *</label>
+            <input type="text" id="revName" placeholder="e.g. Meera Deshmukh" required />
+          </div>
+
+          <div class="formRow">
+            <div>
+              <label for="revCategory">Experience Type *</label>
+              <select id="revCategory" required>
+                <option value="Café & Dining">Café &amp; Dining</option>
+                <option value="Hotel Stay">Boutique Hotel Stay</option>
+                <option value="Both Dining & Stay">Both Dining &amp; Stay</option>
+              </select>
+            </div>
+            <div>
+              <label for="revBranch">Location Visited *</label>
+              <select id="revBranch" required>
+                <option value="Nagpur Manor">Nagpur Flagship</option>
+                <option value="Mumbai Bistro">Mumbai Colaba</option>
+                <option value="Jaipur Haveli">Jaipur Pink City</option>
+                <option value="Goa Sanctuary">Goa Anjuna</option>
+                <option value="Munnar Resort">Munnar Resort</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label>Star Rating *</label>
+            <div class="starPicker" id="starPicker">
+              <span class="starPick active" data-rating="1">★</span>
+              <span class="starPick active" data-rating="2">★</span>
+              <span class="starPick active" data-rating="3">★</span>
+              <span class="starPick active" data-rating="4">★</span>
+              <span class="starPick active" data-rating="5">★</span>
+            </div>
+          </div>
+
+          <div>
+            <label for="revComments">Your Review *</label>
+            <textarea id="revComments" placeholder="What dishes did you love? How was the ambience and hospitality?" required></textarea>
+          </div>
+
+          <button class="btn btnPrimary" type="submit" style="width:100%;">
+            <span>Submit Verified Review</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKING CONFIRMATION VOUCHER MODAL -->
+  <div class="modalBackdrop" id="confirmationModal">
+    <div class="modalBox modalSuccess">
+      <button class="modalCloseBtn" id="confirmationModalCloseBtn">&times;</button>
+      <div class="successVoucher" id="successVoucherContent"></div>
+    </div>
+  </div>
+
+  <!-- ORDER CHECKOUT SUCCESS MODAL -->
+  <div class="modalBackdrop" id="orderSuccessModal">
+    <div class="modalBox modalSuccess">
+      <button class="modalCloseBtn" id="orderSuccessCloseBtn">&times;</button>
+      <div class="successVoucher" id="orderSuccessContent"></div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toastContainer" id="toastContainer"></div>
+
+  <!-- FLOATING ACTION BUTTONS -->
+  <div class="floatingActions">
+    <button class="floatCartBtn" id="floatingCartBtn" aria-label="Quick Cart">
+      <span>🛍️</span>
+      <span class="cartBadge" id="floatingCartBadge">0</span>
+    </button>
+    <a class="waBtn" id="whatsappFloatingBtn" href="https://wa.me/919876543210?text=Hi%20Masala%20Caf%C3%A9%2C%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation%20%2F%20hotel%20booking" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <span class="waIcon" aria-hidden="true">💬</span>
+      <span class="waTooltip">Chat with Concierge</span>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footerGrid">
+        <div class="footerCol">
+          <div class="brand footerBrand">
+            <div class="brandMark"><div class="brandEmblem">☕</div></div>
+            <div>
+              <h3>Masala Café</h3>
+              <small>Kitchen &amp; Boutique Stays</small>
+            </div>
+          </div>
+          <p class="footerAbout">
+            Celebrating the rich culinary heritage of India with modern artisanal twists and tranquil boutique accommodations across 5 landmark destinations.
+          </p>
+          <div class="socialRow">
+            <a href="#" class="socialLink" aria-label="Instagram">📷</a>
+            <a href="#" class="socialLink" aria-label="Facebook">📘</a>
+            <a href="#" class="socialLink" aria-label="TripAdvisor">🦉</a>
+            <a href="#" class="socialLink" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+
+        <div class="footerCol">
+          <h4>Quick Navigation</h4>
+          <ul class="footerLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#hotels">Boutique Hotels &amp; Stays</a></li>
+            <li><a href="#menu">Chef's Culinary Menu</a></li>
+            <li><a href="#booking">Reserve Table or Room</a></li>
+            <li><a href="#chefs">Culinary Masters</a></li>
+            <li><a href="#reviews">Guest Experiences</a></li>
+          </ul>
+        </div>
+
+        <div class="footerCol">
+          <h4>Boutique Properties</h4>
+          <ul class="footerLinks">
+            <li><a href="#hotels">Heritage Manor &amp; Café • Nagpur</a></li>
+            <li><a href="#hotels">The Spice Bay Suites • Mumbai</a></li>
+            <li><a href="#hotels">Royal Haveli Palace • Jaipur</a></li>
+            <li><a href="#hotels">The Palms Sanctuary • Goa</a></li>
+            <li><a href="#hotels">Misty Hills Resort • Munnar</a></li>
+          </ul>
+        </div>
+
+        <div class="footerCol">
+          <h4>Stay Connected</h4>
+          <p class="footerText">Subscribe for seasonal chef tastings, secret menu previews, and hotel getaway discounts.</p>
+          <form class="newsletterForm" onsubmit="event.preventDefault(); showToast('🎉 Subscribed successfully to Masala Digest!'); this.reset();">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Join</button>
+          </form>
+          <div class="footerBadge">
+            <span>🛡️ FSSAI Certified • Eco-Friendly Stays</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footerBottom">
+        <div>&copy; 2026 Masala Café &amp; Boutique Hotels Pvt. Ltd. All rights reserved.</div>
+        <div class="footerLegal">
+          <a href="#">Privacy Policy</a>
+          <span>•</span>
+          <a href="#">Terms of Service</a>
+          <span>•</span>
+          <a href="#">FSSAI Lic. #11521000000000</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       CORE JAVASCRIPT ENGINE
+       ======================================================================== -->
+  <script>
+    const HOTELS_DATA = [
+      {
+        id: "nagpur",
+        name: "Masala Heritage Manor & Café",
+        city: "Nagpur, Maharashtra",
+        tag: "Colonial Manor",
+        badgeClass: "tagAccent",
+        rating: 4.9,
+        reviewsCount: 480,
+        startPrice: 3899,
+        desc: "A restored 1920s colonial manor nestled in lush Civil Lines. Features sunlit courtyard dining, teakwood furnishings, high-ceiling suites, and our flagship roastery.",
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80",
+        amenities: ["Swimming Pool", "Heritage Café", "Ayurvedic Spa", "Free High-Speed Wi-Fi", "Airport Shuttle", "24/7 Butler"],
+        rooms: [
+          { name: "Heritage Deluxe Room", price: 3899, desc: "Teakwood four-poster bed, rainfall shower, courtyard garden view." },
+          { name: "Viceroy Executive Suite", price: 6399, desc: "Separate living parlor, vintage clawfoot tub, complimentary evening high tea." },
+          { name: "Royal Courtyard Villa", price: 8899, desc: "Private outdoor jacuzzi, private lawn, personal butler service." }
+        ],
+        address: "Plot 14, Temple Road, Civil Lines, Nagpur, Maharashtra 440001",
+        phone: "+91 712 254 9901",
+        hours: "Open 24/7 for Stays • Café: 08:00 AM - 11:30 PM",
+        mapQuery: "Civil+Lines+Nagpur+Maharashtra"
+      },
+      {
+        id: "mumbai",
+        name: "The Spice Bay Suites & Bistro",
+        city: "Colaba, Mumbai",
+        tag: "Seafront Luxury",
+        badgeClass: "tagAccent",
+        rating: 4.95,
+        reviewsCount: 620,
+        startPrice: 5499,
+        desc: "Perched along the historic Colaba coastline overlooking the Arabian Sea. Pairs art-deco boutique suites with our celebrated seaside espresso bistro and seafood grill.",
+        image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=80",
+        amenities: ["Sea View Rooftop", "Specialty Coffee Bar", "Fitness Studio", "Valet Parking", "Yacht Charter Desk", "Smart TV & Soundbar"],
+        rooms: [
+          { name: "Marine Bay Deluxe", price: 5499, desc: "Art-deco styling, panoramic bay windows, plush queen bedding." },
+          { name: "Arabian Sea-View Suite", price: 8999, desc: "Direct ocean sunset views, private balcony, marble ensuite." },
+          { name: "Penthouse Panorama", price: 13500, desc: "Entire top-floor suite with expansive ocean terrace and chef's minibar." }
+        ],
+        address: "Sea Face Promenade, Near Gateway of India, Colaba, Mumbai 400005",
+        phone: "+91 22 2289 4410",
+        hours: "Open 24/7 for Stays • Bistro: 07:30 AM - 12:00 Midnight",
+        mapQuery: "Colaba+Causeway+Mumbai+Maharashtra"
+      },
+      {
+        id: "jaipur",
+        name: "Royal Haveli Palace & Rasoi",
+        city: "Pink City, Jaipur",
+        tag: "Rajputana Palace",
+        badgeClass: "tagAccent",
+        rating: 4.88,
+        reviewsCount: 510,
+        startPrice: 4799,
+        desc: "Authentic hand-painted frescos, carved stone jharokhas, and royal thali dining under a starlit central haveli courtyard with evening Rajasthani folk music.",
+        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80",
+        amenities: ["Royal Rasoi Dining", "Stepwell Plunge Pool", "Folk Music Soirée", "Ayurvedic Treatments", "Heritage Walk Tour", "Free Wi-Fi"],
+        rooms: [
+          { name: "Jharokha Heritage Room", price: 4799, desc: "Intricate stone lattice windows, antique brass fixtures, king bed." },
+          { name: "Maharaja Royal Suite", price: 7999, desc: "Hand-painted gold ceilings, silk upholstery, royal bath chamber." },
+          { name: "Sheesh Mahal Suite", price: 11999, desc: "Mirror-mosaic palace room with private rooftop cabana." }
+        ],
+        address: "Kishanpole Bazar Rd, Heritage Quarter, Jaipur, Rajasthan 302001",
+        phone: "+91 141 231 8840",
+        hours: "Open 24/7 for Stays • Rasoi: 09:00 AM - 11:00 PM",
+        mapQuery: "Pink+City+Jaipur+Rajasthan"
+      },
+      {
+        id: "goa",
+        name: "The Palms Spice Sanctuary",
+        city: "Anjuna Cliffside, Goa",
+        tag: "Coastal Villas",
+        badgeClass: "tagAccent",
+        rating: 4.92,
+        reviewsCount: 390,
+        startPrice: 4299,
+        desc: "Hidden amidst swaying coconut palms 400m from the beach. Features airy boho-chic pool villas, alfresco tandoor grills, tropical kokum cocktails, and sunset acoustic sessions.",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80",
+        amenities: ["Private Pool Access", "Beach Shuttle", "Outdoor Cocktail Bar", "Yoga Deck", "Scooter Hire", "Organic Garden Café"],
+        rooms: [
+          { name: "Palm Garden Cottage", price: 4299, desc: "Tropical open-air bath, private veranda with hammock, king bed." },
+          { name: "Poolside Luxury Villa", price: 6899, desc: "Direct pool access, outdoor sundeck, espresso machine." },
+          { name: "Private Plunge Pool Villa", price: 10499, desc: "Exclusive temperature-controlled plunge pool and private garden dining." }
+        ],
+        address: "St. Michael's Vaddo, Near Anjuna Beach, Goa 403509",
+        phone: "+91 832 227 3391",
+        hours: "Open 24/7 for Stays • Beachside Café: 08:00 AM - 01:00 AM",
+        mapQuery: "Anjuna+Beach+Goa"
+      },
+      {
+        id: "munnar",
+        name: "Misty Hills Tea & Spice Resort",
+        city: "Devikulam Valley, Munnar",
+        tag: "Mountain Retreat",
+        badgeClass: "tagAccent",
+        rating: 4.94,
+        reviewsCount: 340,
+        startPrice: 3999,
+        desc: "Perched atop rolling emerald tea gardens and wild cardamom slopes. Features warm stone fireplaces, cloud-canopy dining, farm-to-cup tea tasting, and organic spice trails.",
+        image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=1000&q=80",
+        amenities: ["Tea Tasting Lounge", "Fireplace Chalets", "Spice Trail Guide", "Organic Farm Café", "Mountain Biking", "High-Speed Wi-Fi"],
+        rooms: [
+          { name: "Tea Valley Chalet", price: 3999, desc: "Pine wood interiors, tea-plantation view balcony, herbal tea station." },
+          { name: "Misty Ridge Suite", price: 5999, desc: "Wood-burning fireplace, panoramic mountain glazing, luxury soaking tub." },
+          { name: "Spice Planter's Bungalow", price: 8499, desc: "Two-bedroom colonial cottage with wraparound veranda and private chef." }
+        ],
+        address: "Chithirapuram Post, Devikulam Road, Munnar, Kerala 685565",
+        phone: "+91 486 526 4402",
+        hours: "Open 24/7 for Stays • Mountain Café: 07:00 AM - 10:30 PM",
+        mapQuery: "Devikulam+Munnar+Kerala"
+      }
+    ];
+
+    const MENU_DATA = [
+      {
+        id: "m1",
+        name: "Old Delhi Butter Chicken",
+        cat: "north",
+        diet: "nonveg",
+        price: 340,
+        isSpecial: true,
+        spice: "Mild",
+        calories: "480 kcal",
+        tag: "Chef Special",
+        desc: "Tender tandoor-roasted chicken simmered in a velvety tomato makhani gravy enriched with slow-churned butter and kasuri methi.",
+        image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m2",
+        name: "24-Hour Charcoal Dal Makhani",
+        cat: "north",
+        diet: "veg",
+        price: 260,
+        isSpecial: true,
+        spice: "Mild",
+        calories: "390 kcal",
+        tag: "Signature Dish",
+        desc: "Slow-simmered overnight over fragrant charcoal embers with black urad lentils, organic cream, and hand-churned white butter.",
+        image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m3",
+        name: "Mysore Masala Dosa",
+        cat: "south",
+        diet: "veg",
+        price: 160,
+        isSpecial: false,
+        spice: "Medium",
+        calories: "320 kcal",
+        tag: "Crispy Delight",
+        desc: "Golden crispy fermented crepe smeared with spicy red garlic-chili chutney, stuffed with tempered potato mash, served with 3 chutneys.",
+        image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m4",
+        name: "Ghee Roast Podi Idli",
+        cat: "south",
+        diet: "veg",
+        price: 140,
+        isSpecial: false,
+        spice: "Medium",
+        calories: "280 kcal",
+        tag: "Best Seller",
+        desc: "Bite-sized steamed rice idlis tossed in molten A2 desi ghee and stone-ground spiced gunpowder podi with curry leaves.",
+        image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m5",
+        name: "Dum Murgh Biryani Royale",
+        cat: "biryani",
+        diet: "nonveg",
+        price: 380,
+        isSpecial: true,
+        spice: "Medium",
+        calories: "540 kcal",
+        tag: "Royal Feast",
+        desc: "Aged long-grain basmati layered with marinated chicken, saffron milk, fresh mint, and slow-cooked in a dough-sealed earthen pot.",
+        image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m6",
+        name: "Paneer Tikka Angara",
+        cat: "starters",
+        diet: "veg",
+        price: 270,
+        isSpecial: false,
+        spice: "Medium",
+        calories: "360 kcal",
+        tag: "Tandoori Star",
+        desc: "Thick cubes of fresh malai paneer marinated in Kashmiri chili, mustard oil, and hung curd, charred to smoky perfection.",
+        image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m7",
+        name: "Dahi Puri Royale (6 Pcs)",
+        cat: "starters",
+        diet: "veg",
+        price: 180,
+        isSpecial: false,
+        spice: "Mild",
+        calories: "240 kcal",
+        tag: "Street Gourmet",
+        desc: "Crispy semolina spheres filled with spiced potatoes, chilled sweet curd, pomegranate pearls, date-tamarind and mint-coriander coulis.",
+        image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m8",
+        name: "South Indian Filter Kaapi",
+        cat: "cafe",
+        diet: "veg",
+        price: 95,
+        isSpecial: true,
+        spice: "None",
+        calories: "90 kcal",
+        tag: "Artisanal Brew",
+        desc: "Freshly roasted chicory and Arabica beans brewed in traditional brass filters, hand-frothed with piping hot whole milk.",
+        image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m9",
+        name: "Iced Cardamom Cold Brew",
+        cat: "cafe",
+        diet: "veg",
+        price: 150,
+        isSpecial: false,
+        spice: "None",
+        calories: "110 kcal",
+        tag: "Cafe Signature",
+        desc: "16-hour steeped Araku valley cold brew infused with whole green cardamom quills and sweet condensed milk over crystal ice.",
+        image: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m10",
+        name: "Chettinad Pepper Chicken",
+        cat: "south",
+        diet: "nonveg",
+        price: 330,
+        isSpecial: true,
+        spice: "Fiery",
+        calories: "430 kcal",
+        tag: "Heritage Recipe",
+        desc: "Country chicken cooked with freshly crushed tellicherry black peppercorns, fennel seeds, toasted coconut, and shallots.",
+        image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m11",
+        name: "Subz Hyderabadi Dum Biryani",
+        cat: "biryani",
+        diet: "veg",
+        price: 290,
+        isSpecial: false,
+        spice: "Medium",
+        calories: "410 kcal",
+        tag: "Aromatic Delight",
+        desc: "Seasonal garden vegetables cooked in royal Hyderabadi spices, layered with fragrant basmati, fried cashews, and crispy barista onions.",
+        image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m12",
+        name: "Rasmalai Tres Leches",
+        cat: "desserts",
+        diet: "veg",
+        price: 240,
+        isSpecial: true,
+        spice: "None",
+        calories: "320 kcal",
+        tag: "Fusion Classic",
+        desc: "Light sponge cake soaked in saffron-cardamom clotted milk, topped with whipped cream, rose petals, and slivered pistachios.",
+        image: "https://images.unsplash.com/photo-1589301773859-a1b913689ea5?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m13",
+        name: "Gulab Jamun Cheesecake",
+        cat: "desserts",
+        diet: "veg",
+        price: 220,
+        isSpecial: false,
+        spice: "None",
+        calories: "360 kcal",
+        tag: "Sweet Sensation",
+        desc: "Baked New York style cream cheesecake embedded with warm honeyed gulab jamun bites on a cardamom biscuit crust.",
+        image: "https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: "m14",
+        name: "Kesar Mango Lassi",
+        cat: "desserts",
+        diet: "veg",
+        price: 140,
+        isSpecial: false,
+        spice: "None",
+        calories: "210 kcal",
+        tag: "Cooler",
+        desc: "Thick creamy yogurt whipped with ripe Alphonso mango pulp, Kashmiri saffron threads, and crushed green cardamom.",
+        image: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=600&q=80"
+      }
+    ];
+
+    const REVIEWS_DATA = [
+      {
+        name: "Rahul & Ananya Sengupta",
+        type: "Both Dining & Stay",
+        rating: 5,
+        location: "Nagpur Flagship Manor",
+        time: "3 days ago",
+        text: "We spent 2 nights at Masala Heritage Manor. The colonial architecture is breathtaking, and having the cafe right downstairs was heaven. Do NOT miss the 24-hour Dal Makhani and filter coffee!"
+      },
+      {
+        name: "Devika Narayanan",
+        type: "Café & Dining",
+        rating: 5,
+        location: "Mumbai Colaba Bistro",
+        time: "1 week ago",
+        text: "The iced cardamom cold brew paired with the Mysore Masala Dosa while looking out at the Arabian Sea is hands down the best breakfast in South Mumbai. Flawless hospitality."
+      },
+      {
+        name: "Karan Johar Rathore",
+        type: "Hotel Stay",
+        rating: 5,
+        location: "Jaipur Royal Haveli",
+        time: "2 weeks ago",
+        text: "Staying at the Haveli in Jaipur felt like living in a royal fairytale. The live folk music during our courtyard dinner made our anniversary unforgettable. 10/10 recommendation."
+      },
+      {
+        name: "Dr. Alistair & Sarah Vance",
+        type: "Both Dining & Stay",
+        rating: 5,
+        location: "Goa Palms Sanctuary",
+        time: "3 weeks ago",
+        text: "Pure serenity! The private plunge pool villa in Goa exceeded all expectations. Extremely attentive staff and the grilled coastal fish with Chettinad curry was a culinary triumph."
+      }
+    ];
+
+    const state = {
+      cart: [],
+      appliedCoupon: null,
+      activeCategory: "all",
+      activeDiet: "all",
+      searchQuery: "",
+      activeBranchId: "nagpur",
+      starRatingSelected: 5
+    };
+
+    const DOM = {
+      header: document.getElementById("mainHeader"),
+      mobileToggle: document.getElementById("mobileToggle"),
+      mobileDrawer: document.getElementById("mobileDrawer"),
+      mobileDrawerBackdrop: document.getElementById("mobileDrawerBackdrop"),
+      drawerCloseBtn: document.getElementById("drawerCloseBtn"),
+      promoBanner: document.getElementById("promoBanner"),
+      promoCloseBtn: document.getElementById("promoCloseBtn"),
+      hotelsGrid: document.getElementById("hotelsGridContainer"),
+      menuSearch: document.getElementById("menuSearchInput"),
+      clearSearch: document.getElementById("clearSearchBtn"),
+      catContainer: document.getElementById("categoryFilterContainer"),
+      dietBtns: document.querySelectorAll(".dietBtn"),
+      menuCards: document.getElementById("menuCardsContainer"),
+      menuCountLabel: document.getElementById("menuCountLabel"),
+      tabDiningBtn: document.getElementById("tabDiningBtn"),
+      tabHotelBtn: document.getElementById("tabHotelBtn"),
+      diningPanel: document.getElementById("diningPanel"),
+      hotelPanel: document.getElementById("hotelPanel"),
+      diningForm: document.getElementById("diningBookingForm"),
+      hotelForm: document.getElementById("hotelBookingForm"),
+      diningDateInput: document.getElementById("diningDate"),
+      hotelCheckInInput: document.getElementById("hotelCheckIn"),
+      hotelCheckOutInput: document.getElementById("hotelCheckOut"),
+      hotelPropertySelect: document.getElementById("hotelProperty"),
+      hotelRoomTypeSelect: document.getElementById("hotelRoomType"),
+      hotelStayDays: document.getElementById("hotelStayDays"),
+      hotelEstPrice: document.getElementById("hotelEstPrice"),
+      reviewsGrid: document.getElementById("reviewsGridContainer"),
+      openReviewBtn: document.getElementById("openReviewModalBtn"),
+      reviewModal: document.getElementById("reviewModal"),
+      reviewModalCloseBtn: document.getElementById("reviewModalCloseBtn"),
+      submitReviewForm: document.getElementById("submitReviewForm"),
+      starPicker: document.getElementById("starPicker"),
+      branchPillsContainer: document.getElementById("branchPillsContainer"),
+      branchDetailsBox: document.getElementById("branchDetailsBox"),
+      googleMapFrame: document.getElementById("googleMapFrame"),
+      openCartBtn: document.getElementById("openCartBtn"),
+      floatingCartBtn: document.getElementById("floatingCartBtn"),
+      cartDrawer: document.getElementById("cartDrawer"),
+      cartDrawerBackdrop: document.getElementById("cartDrawerBackdrop"),
+      cartCloseBtn: document.getElementById("cartCloseBtn"),
+      cartBody: document.getElementById("cartBody"),
+      cartCountBadge: document.getElementById("cartCountBadge"),
+      floatingCartBadge: document.getElementById("floatingCartBadge"),
+      cartItemsCountText: document.getElementById("cartItemsCountText"),
+      couponInput: document.getElementById("couponInput"),
+      applyCouponBtn: document.getElementById("applyCouponBtn"),
+      couponFeedback: document.getElementById("couponFeedback"),
+      billSubtotal: document.getElementById("billSubtotal"),
+      billDiscountRow: document.getElementById("billDiscountRow"),
+      billDiscount: document.getElementById("billDiscount"),
+      billGst: document.getElementById("billGst"),
+      billTotal: document.getElementById("billTotal"),
+      checkoutBtn: document.getElementById("checkoutBtn"),
+      hotelModal: document.getElementById("hotelModal"),
+      hotelModalCloseBtn: document.getElementById("hotelModalCloseBtn"),
+      hotelModalContent: document.getElementById("hotelModalContent"),
+      confirmationModal: document.getElementById("confirmationModal"),
+      confirmationModalCloseBtn: document.getElementById("confirmationModalCloseBtn"),
+      successVoucherContent: document.getElementById("successVoucherContent"),
+      orderSuccessModal: document.getElementById("orderSuccessModal"),
+      orderSuccessCloseBtn: document.getElementById("orderSuccessCloseBtn"),
+      orderSuccessContent: document.getElementById("orderSuccessContent"),
+      toastContainer: document.getElementById("toastContainer")
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderHotels();
+      renderMenu();
+      renderReviews();
+      renderBranchDetails(state.activeBranchId);
+      setupDateLimits();
+      setupEventListeners();
+    });
+
+    function setupEventListeners() {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 30) DOM.header.classList.add("scrolled");
+        else DOM.header.classList.remove("scrolled");
+      });
+
+      if (DOM.promoCloseBtn) {
+        DOM.promoCloseBtn.addEventListener("click", () => DOM.promoBanner.style.display = "none");
+      }
+
+      DOM.mobileToggle.addEventListener("click", () => toggleMobileDrawer(true));
+      DOM.mobileDrawerBackdrop.addEventListener("click", () => toggleMobileDrawer(false));
+      DOM.drawerCloseBtn.addEventListener("click", () => toggleMobileDrawer(false));
+      document.querySelectorAll(".mobileNavLink").forEach(link => {
+        link.addEventListener("click", () => toggleMobileDrawer(false));
+      });
+
+      DOM.menuSearch.addEventListener("input", (e) => {
+        state.searchQuery = e.target.value.trim().toLowerCase();
+        DOM.clearSearch.style.display = state.searchQuery ? "block" : "none";
+        renderMenu();
+      });
+
+      DOM.clearSearch.addEventListener("click", () => {
+        DOM.menuSearch.value = "";
+        state.searchQuery = "";
+        DOM.clearSearch.style.display = "none";
+        renderMenu();
+      });
+
+      DOM.catContainer.addEventListener("click", (e) => {
+        const pill = e.target.closest(".catPill");
+        if (!pill) return;
+        DOM.catContainer.querySelectorAll(".catPill").forEach(b => b.classList.remove("active"));
+        pill.classList.add("active");
+        state.activeCategory = pill.dataset.cat;
+        renderMenu();
+      });
+
+      DOM.dietBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          DOM.dietBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          state.activeDiet = btn.dataset.diet;
+          renderMenu();
+        });
+      });
+
+      DOM.openCartBtn.addEventListener("click", () => toggleCartDrawer(true));
+      DOM.floatingCartBtn.addEventListener("click", () => toggleCartDrawer(true));
+      DOM.cartDrawerBackdrop.addEventListener("click", () => toggleCartDrawer(false));
+      DOM.cartCloseBtn.addEventListener("click", () => toggleCartDrawer(false));
+
+      DOM.applyCouponBtn.addEventListener("click", applyCouponCode);
+      DOM.couponInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          applyCouponCode();
+        }
+      });
+
+      DOM.checkoutBtn.addEventListener("click", handleCheckout);
+
+      DOM.diningForm.addEventListener("submit", handleDiningSubmit);
+      DOM.hotelForm.addEventListener("submit", handleHotelSubmit);
+
+      [DOM.hotelPropertySelect, DOM.hotelRoomTypeSelect, DOM.hotelCheckInInput, DOM.hotelCheckOutInput].forEach(el => {
+        if (el) el.addEventListener("change", updateHotelStayEstimate);
+      });
+
+      DOM.branchPillsContainer.addEventListener("click", (e) => {
+        const pill = e.target.closest(".branchPill");
+        if (!pill) return;
+        DOM.branchPillsContainer.querySelectorAll(".branchPill").forEach(p => p.classList.remove("active"));
+        pill.classList.add("active");
+        const branchId = pill.dataset.branch;
+        state.activeBranchId = branchId;
+        renderBranchDetails(branchId);
+      });
+
+      DOM.openReviewBtn.addEventListener("click", () => DOM.reviewModal.classList.add("open"));
+      DOM.reviewModalCloseBtn.addEventListener("click", () => DOM.reviewModal.classList.remove("open"));
+      DOM.reviewModal.addEventListener("click", (e) => {
+        if (e.target === DOM.reviewModal) DOM.reviewModal.classList.remove("open");
+      });
+
+      if (DOM.starPicker) {
+        DOM.starPicker.addEventListener("click", (e) => {
+          const star = e.target.closest(".starPick");
+          if (!star) return;
+          const val = parseInt(star.dataset.rating, 10);
+          state.starRatingSelected = val;
+          updateStarPickerUI(val);
+        });
+      }
+
+      DOM.submitReviewForm.addEventListener("submit", handleReviewSubmit);
+
+      DOM.hotelModalCloseBtn.addEventListener("click", () => DOM.hotelModal.classList.remove("open"));
+      DOM.hotelModal.addEventListener("click", (e) => {
+        if (e.target === DOM.hotelModal) DOM.hotelModal.classList.remove("open");
+      });
+
+      DOM.confirmationModalCloseBtn.addEventListener("click", () => DOM.confirmationModal.classList.remove("open"));
+      DOM.orderSuccessCloseBtn.addEventListener("click", () => DOM.orderSuccessModal.classList.remove("open"));
+    }
+
+    function toggleMobileDrawer(open) {
+      if (open) {
+        DOM.mobileDrawer.classList.add("open");
+        document.body.style.overflow = "hidden";
+      } else {
+        DOM.mobileDrawer.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+    }
+
+    function toggleCartDrawer(open) {
+      if (open) {
+        DOM.cartDrawer.classList.add("open");
+        document.body.style.overflow = "hidden";
+      } else {
+        DOM.cartDrawer.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+    }
+
+    function setupDateLimits() {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, "0");
+      const dd = String(today.getDate()).padStart(2, "0");
+      const minDateStr = `${yyyy}-${mm}-${dd}`;
+
+      if (DOM.diningDateInput) {
+        DOM.diningDateInput.min = minDateStr;
+        DOM.diningDateInput.value = minDateStr;
+      }
+
+      const tomorrow = new Date(today);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const t_yyyy = tomorrow.getFullYear();
+      const t_mm = String(tomorrow.getMonth() + 1).padStart(2, "0");
+      const t_dd = String(tomorrow.getDate()).padStart(2, "0");
+      const tomorrowDateStr = `${t_yyyy}-${t_mm}-${t_dd}`;
+
+      if (DOM.hotelCheckInInput) {
+        DOM.hotelCheckInInput.min = minDateStr;
+        DOM.hotelCheckInInput.value = minDateStr;
+      }
+
+      if (DOM.hotelCheckOutInput) {
+        DOM.hotelCheckOutInput.min = tomorrowDateStr;
+        DOM.hotelCheckOutInput.value = tomorrowDateStr;
+      }
+
+      updateHotelStayEstimate();
+    }
+
+    function renderHotels() {
+      if (!DOM.hotelsGrid) return;
+      DOM.hotelsGrid.innerHTML = HOTELS_DATA.map(hotel => `
+        <div class="hotelCard" id="hotel-card-${hotel.id}">
+          <div class="hotelImgWrapper">
+            <div class="hotelImg" style="background-image:url('${hotel.image}')"></div>
+            <div class="hotelBadge">${hotel.tag}</div>
+            <div class="hotelRatingBadge">★ ${hotel.rating}</div>
+          </div>
+          <div class="hotelBody">
+            <div class="hotelLocationTag">📍 ${hotel.city}</div>
+            <h3 class="hotelTitle">${hotel.name}</h3>
+            <p class="hotelDesc">${hotel.desc}</p>
+            <div class="hotelAmenities">
+              ${hotel.amenities.slice(0, 4).map(a => `<span class="amenityPill">${a}</span>`).join("")}
+              <span class="amenityPill">+${hotel.amenities.length - 4} more</span>
+            </div>
+            <div class="hotelFooter">
+              <div class="hotelPriceCol">
+                <span>Starting From</span>
+                <strong>₹${hotel.startPrice.toLocaleString()} <small style="font-size:0.75rem;font-weight:600;color:var(--text-muted)">/ night</small></strong>
+              </div>
+              <div class="hotelActions">
+                <button class="btn btnOutline" onclick="openHotelDetails('${hotel.id}')">View Details</button>
+                <button class="btn btnPrimary" onclick="bookThisHotel('${hotel.id}')">Book Stay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function openHotelDetails(hotelId) {
+      const hotel = HOTELS_DATA.find(h => h.id === hotelId);
+      if (!hotel) return;
+
+      DOM.hotelModalContent.innerHTML = `
+        <div class="hotelModalHeaderImg" style="background-image:url('${hotel.image}')">
+          <span class="hotelBadge" style="top:20px;left:20px;position:absolute;">${hotel.tag} • ★ ${hotel.rating} (${hotel.reviewsCount} reviews)</span>
+        </div>
+        <div class="hotelModalInner">
+          <h2>${hotel.name}</h2>
+          <p class="hotelLocationTag" style="margin-bottom:12px;">📍 ${hotel.address}</p>
+          <p style="color:var(--text-muted);line-height:1.7;margin-bottom:20px;">${hotel.desc}</p>
+
+          <h4 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:10px;">🌟 Property Amenities &amp; Highlights</h4>
+          <div class="hotelAmenities" style="margin-bottom:24px;">
+            ${hotel.amenities.map(a => `<span class="amenityPill" style="padding:6px 14px;font-size:0.85rem;">✓ ${a}</span>`).join("")}
+          </div>
+
+          <h4 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:12px;">🛏️ Available Room Tiers &amp; Rates</h4>
+          <div class="roomTiersTable">
+            ${hotel.rooms.map(room => `
+              <div class="roomRow">
+                <div>
+                  <strong>${room.name}</strong>
+                  <div style="color:var(--text-muted);font-size:0.82rem;margin-top:2px;">${room.desc}</div>
+                </div>
+                <div style="text-align:right;">
+                  <strong>₹${room.price.toLocaleString()}</strong>
+                  <span style="display:block;font-size:0.75rem;color:var(--text-light);">/ night + taxes</span>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+
+          <div style="display:flex;gap:14px;margin-top:24px;justify-content:flex-end;">
+            <a href="tel:${hotel.phone.replace(/[^0-9+]/g, '')}" class="btn btnOutline">📞 Call Concierge (${hotel.phone})</a>
+            <button class="btn btnPrimary" onclick="DOM.hotelModal.classList.remove('open'); bookThisHotel('${hotel.id}')">
+              <span>Book At This Property</span>
+              <span class="btnArrow">→</span>
+            </button>
+          </div>
+        </div>
+      `;
+
+      DOM.hotelModal.classList.add("open");
+    }
+
+    function bookThisHotel(hotelId) {
+      switchBookingTab("hotel");
+      if (DOM.hotelPropertySelect) {
+        DOM.hotelPropertySelect.value = hotelId;
+        updateRoomTypesBasedOnHotel();
+        updateHotelStayEstimate();
+      }
+      const bookingEl = document.getElementById("booking");
+      if (bookingEl) bookingEl.scrollIntoView({ behavior: "smooth" });
+      showToast(`Selected ${HOTELS_DATA.find(h=>h.id===hotelId)?.name}`);
+    }
+
+    function updateRoomTypesBasedOnHotel() {
+      const selectedHotelId = DOM.hotelPropertySelect.value;
+      const hotel = HOTELS_DATA.find(h => h.id === selectedHotelId);
+      if (!hotel || !DOM.hotelRoomTypeSelect) return;
+
+      DOM.hotelRoomTypeSelect.innerHTML = hotel.rooms.map(r => `
+        <option value="${r.name}">${r.name} - ₹${r.price.toLocaleString()}/night</option>
+      `).join("");
+    }
+
+    function updateHotelStayEstimate() {
+      if (!DOM.hotelCheckInInput || !DOM.hotelCheckOutInput || !DOM.hotelStayDays) return;
+
+      const checkIn = new Date(DOM.hotelCheckInInput.value);
+      const checkOut = new Date(DOM.hotelCheckOutInput.value);
+
+      let nights = Math.ceil((checkOut - checkIn) / (1000 * 60 * 60 * 24));
+      if (isNaN(nights) || nights < 1) nights = 1;
+
+      DOM.hotelStayDays.textContent = `${nights} Night${nights > 1 ? "s" : ""}`;
+
+      const selectedHotelId = DOM.hotelPropertySelect.value;
+      const hotel = HOTELS_DATA.find(h => h.id === selectedHotelId) || HOTELS_DATA[0];
+      const estTotal = hotel.startPrice * nights;
+      DOM.hotelEstPrice.textContent = `₹${estTotal.toLocaleString()}`;
+    }
+
+    function renderMenu() {
+      if (!DOM.menuCards) return;
+
+      const filtered = MENU_DATA.filter(item => {
+        const matchCat = state.activeCategory === "all" || item.cat === state.activeCategory;
+        let matchDiet = true;
+        if (state.activeDiet === "veg") matchDiet = item.diet === "veg";
+        else if (state.activeDiet === "nonveg") matchDiet = item.diet === "nonveg";
+        else if (state.activeDiet === "special") matchDiet = item.isSpecial;
+
+        const matchQuery = !state.searchQuery ||
+          item.name.toLowerCase().includes(state.searchQuery) ||
+          item.desc.toLowerCase().includes(state.searchQuery) ||
+          item.tag.toLowerCase().includes(state.searchQuery);
+
+        return matchCat && matchDiet && matchQuery;
+      });
+
+      DOM.menuCountLabel.textContent = `Showing ${filtered.length} of ${MENU_DATA.length} dishes`;
+
+      if (filtered.length === 0) {
+        DOM.menuCards.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align:center; padding: 48px 20px; background:#fff; border-radius:18px; border:1px solid var(--border);">
+            <div style="font-size:2.5rem;margin-bottom:8px;">🔍</div>
+            <h4 style="font-family:var(--font-serif);font-size:1.3rem;margin-bottom:6px;">No culinary creations found</h4>
+            <p style="color:var(--text-muted);font-size:0.92rem;">Try modifying your search or dietary filter to explore other specialties.</p>
+            <button class="btn btnOutline" style="margin-top:16px;" onclick="resetMenuFilters()">Reset Filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      DOM.menuCards.innerHTML = filtered.map(item => {
+        const inCartItem = state.cart.find(c => c.id === item.id);
+        const cartQty = inCartItem ? inCartItem.qty : 0;
+
+        return `
+          <div class="foodCard" id="menu-card-${item.id}">
+            <div class="foodImg" style="background-image:url('${item.image}')">
+              <div class="foodDietBadge" title="${item.diet === 'veg' ? 'Pure Vegetarian' : 'Non-Vegetarian'}">
+                <span class="dietIconSquare ${item.diet}"></span>
+              </div>
+              ${item.tag ? `<div class="foodTagTop">${item.tag}</div>` : ""}
+            </div>
+            <div class="foodBody">
+              <div class="foodTop">
+                <h3 class="foodName">${item.name}</h3>
+                <div class="foodPrice">₹${item.price}</div>
+              </div>
+              <p class="foodDesc">${item.desc}</p>
+              <div class="foodMeta">
+                <span class="spiceLevel">🌶️ ${item.spice}</span>
+                <span style="font-size:0.75rem;color:var(--text-light);">• ${item.calories}</span>
+                ${cartQty > 0 ? `
+                  <div class="qtyControl" style="margin-left:auto;">
+                    <button class="qtyBtn" onclick="updateCartQty('${item.id}', -1)">-</button>
+                    <span class="qtyVal">${cartQty}</span>
+                    <button class="qtyBtn" onclick="updateCartQty('${item.id}', 1)">+</button>
+                  </div>
+                ` : `
+                  <button class="foodActionBtn" onclick="addToCart('${item.id}')">
+                    <span>+ Add</span>
+                  </button>
+                `}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function resetMenuFilters() {
+      state.searchQuery = "";
+      state.activeCategory = "all";
+      state.activeDiet = "all";
+      DOM.menuSearch.value = "";
+      DOM.clearSearch.style.display = "none";
+      DOM.catContainer.querySelectorAll(".catPill").forEach(b => {
+        b.classList.toggle("active", b.dataset.cat === "all");
+      });
+      DOM.dietBtns.forEach(b => {
+        b.classList.toggle("active", b.dataset.diet === "all");
+      });
+      renderMenu();
+    }
+
+    function addToCart(itemId) {
+      const item = MENU_DATA.find(m => m.id === itemId);
+      if (!item) return;
+
+      const existing = state.cart.find(c => c.id === itemId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        state.cart.push({ ...item, qty: 1 });
+      }
+
+      updateCartUI();
+      renderMenu();
+      showToast(`Added ${item.name} to cart 🛍️`);
+    }
+
+    function updateCartQty(itemId, delta) {
+      const index = state.cart.findIndex(c => c.id === itemId);
+      if (index === -1) return;
+
+      state.cart[index].qty += delta;
+      if (state.cart[index].qty <= 0) {
+        state.cart.splice(index, 1);
+      }
+
+      updateCartUI();
+      renderMenu();
+    }
+
+    function updateCartUI() {
+      const totalItems = state.cart.reduce((sum, item) => sum + item.qty, 0);
+
+      DOM.cartCountBadge.textContent = totalItems;
+      DOM.floatingCartBadge.textContent = totalItems;
+      DOM.cartItemsCountText.textContent = `${totalItems} dish${totalItems === 1 ? "" : "es"} selected`;
+
+      if (state.cart.length === 0) {
+        DOM.cartBody.innerHTML = `
+          <div class="cartEmptyNotice">
+            <div class="emptyIcon">🥘</div>
+            <h4 style="font-family:var(--font-serif);font-size:1.2rem;margin-bottom:6px;">Your cart is hungry!</h4>
+            <p style="font-size:0.88rem;">Explore our gourmet menu and add your favorite dishes to start your order.</p>
+            <button class="btn btnPrimary" style="margin-top:20px;" onclick="toggleCartDrawer(false); window.location.hash='#menu';">Explore Menu</button>
+          </div>
+        `;
+        DOM.checkoutBtn.disabled = true;
+        DOM.billSubtotal.textContent = "₹0";
+        DOM.billDiscountRow.style.display = "none";
+        DOM.billGst.textContent = "₹0";
+        DOM.billTotal.textContent = "₹0";
+        return;
+      }
+
+      DOM.checkoutBtn.disabled = false;
+      DOM.cartBody.innerHTML = state.cart.map(item => `
+        <div class="cartItemRow">
+          <div class="cartItemImg" style="background-image:url('${item.image}')"></div>
+          <div class="cartItemInfo">
+            <div class="cartItemTitle">${item.name}</div>
+            <div class="cartItemPrice">₹${item.price} each</div>
+          </div>
+          <div class="qtyControl">
+            <button class="qtyBtn" onclick="updateCartQty('${item.id}', -1)">-</button>
+            <span class="qtyVal">${item.qty}</span>
+            <button class="qtyBtn" onclick="updateCartQty('${item.id}', 1)">+</button>
+          </div>
+          <div style="font-weight:900;font-size:0.95rem;color:var(--text-main);min-width:55px;text-align:right;">
+            ₹${item.price * item.qty}
+          </div>
+        </div>
+      `).join("");
+
+      const subtotal = state.cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      let discount = 0;
+
+      if (state.appliedCoupon === "MASALA10") {
+        discount = Math.round(subtotal * 0.10);
+      } else if (state.appliedCoupon === "WELCOME50") {
+        discount = Math.min(50, subtotal);
+      }
+
+      const taxable = subtotal - discount;
+      const gst = Math.round(taxable * 0.05);
+      const grandTotal = taxable + gst;
+
+      DOM.billSubtotal.textContent = `₹${subtotal.toLocaleString()}`;
+      if (discount > 0) {
+        DOM.billDiscountRow.style.display = "flex";
+        DOM.billDiscount.textContent = `-₹${discount.toLocaleString()}`;
+      } else {
+        DOM.billDiscountRow.style.display = "none";
+      }
+
+      DOM.billGst.textContent = `₹${gst.toLocaleString()}`;
+      DOM.billTotal.textContent = `₹${grandTotal.toLocaleString()}`;
+    }
+
+    function applyCouponCode() {
+      const code = DOM.couponInput.value.trim().toUpperCase();
+      if (!code) return;
+
+      if (state.cart.length === 0) {
+        DOM.couponFeedback.textContent = "⚠️ Add items to cart before applying coupon.";
+        DOM.couponFeedback.style.color = "var(--brand)";
+        return;
+      }
+
+      if (code === "MASALA10") {
+        state.appliedCoupon = "MASALA10";
+        DOM.couponFeedback.textContent = "🎉 Code MASALA10 applied: 10% discount unlocked!";
+        DOM.couponFeedback.style.color = "var(--accent-green)";
+        showToast("Promo code MASALA10 applied!");
+      } else if (code === "WELCOME50") {
+        state.appliedCoupon = "WELCOME50";
+        DOM.couponFeedback.textContent = "🎉 Code WELCOME50 applied: ₹50 instant discount!";
+        DOM.couponFeedback.style.color = "var(--accent-green)";
+        showToast("Promo code WELCOME50 applied!");
+      } else {
+        DOM.couponFeedback.textContent = "❌ Invalid promo code. Try MASALA10.";
+        DOM.couponFeedback.style.color = "var(--accent-red)";
+        state.appliedCoupon = null;
+      }
+
+      updateCartUI();
+    }
+
+    function handleCheckout() {
+      if (state.cart.length === 0) return;
+
+      const orderId = "ORD-" + Math.floor(100000 + Math.random() * 900000);
+      const totalText = DOM.billTotal.textContent;
+
+      DOM.orderSuccessContent.innerHTML = `
+        <div class="voucherStamp">🎉</div>
+        <h3 style="font-family:var(--font-serif);font-size:1.6rem;margin-bottom:6px;">Order Placed Successfully!</h3>
+        <p style="color:var(--text-muted);font-size:0.92rem;">Our kitchen has received your order and is handcrafting your gourmet dishes.</p>
+
+        <div class="voucherIdBadge">ORDER #${orderId}</div>
+
+        <div class="voucherDetailsGrid">
+          <div>
+            <span>Total Amount</span>
+            <strong>${totalText}</strong>
+          </div>
+          <div>
+            <span>Estimated Prep Time</span>
+            <strong>25 - 35 Mins</strong>
+          </div>
+          <div>
+            <span>Order Type</span>
+            <strong>Dine-in / Express Takeaway</strong>
+          </div>
+          <div>
+            <span>Dishes Count</span>
+            <strong>${state.cart.reduce((s, i) => s + i.qty, 0)} Items</strong>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-subtle);border-radius:12px;padding:12px;margin-bottom:20px;text-align:left;font-size:0.85rem;">
+          <strong>Order Summary:</strong>
+          <ul style="margin:6px 0 0 16px;color:var(--text-muted);">
+            ${state.cart.map(i => `<li>${i.name} × ${i.qty} — ₹${i.price * i.qty}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="voucherActions">
+          <button class="btn btnPrimary" onclick="DOM.orderSuccessModal.classList.remove('open');">
+            <span>Continue Browsing</span>
+          </button>
+          <a href="https://wa.me/919876543210?text=Hi%20Masala%20Caf%C3%A9%2C%20I%20placed%20Order%20%23${orderId}%20for%20${encodeURIComponent(totalText)}.%20Please%20confirm%20prep%20status." target="_blank" class="btn btnOutline">
+            <span>Send to WhatsApp 💬</span>
+          </a>
+        </div>
+      `;
+
+      state.cart = [];
+      state.appliedCoupon = null;
+      DOM.couponInput.value = "";
+      DOM.couponFeedback.textContent = "";
+      updateCartUI();
+      renderMenu();
+      toggleCartDrawer(false);
+
+      DOM.orderSuccessModal.classList.add("open");
+    }
+
+    function switchBookingTab(type) {
+      if (type === "dining") {
+        DOM.tabDiningBtn.classList.add("active");
+        DOM.tabDiningBtn.setAttribute("aria-selected", "true");
+        DOM.tabHotelBtn.classList.remove("active");
+        DOM.tabHotelBtn.setAttribute("aria-selected", "false");
+
+        DOM.diningPanel.style.display = "block";
+        DOM.hotelPanel.style.display = "none";
+      } else {
+        DOM.tabHotelBtn.classList.add("active");
+        DOM.tabHotelBtn.setAttribute("aria-selected", "true");
+        DOM.tabDiningBtn.classList.remove("active");
+        DOM.tabDiningBtn.setAttribute("aria-selected", "false");
+
+        DOM.diningPanel.style.display = "none";
+        DOM.hotelPanel.style.display = "block";
+        updateRoomTypesBasedOnHotel();
+      }
+    }
+
+    window.switchBookingTab = switchBookingTab;
+    window.switchToBookingTab = (type) => switchBookingTab(type);
+
+    function handleDiningSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("diningName").value.trim();
+      const phone = document.getElementById("diningPhone").value.trim();
+      const branch = document.getElementById("diningBranch").value;
+      const guests = document.getElementById("diningGuests").value;
+      const date = document.getElementById("diningDate").value;
+      const time = document.getElementById("diningTime").value;
+      const seating = document.getElementById("diningSeating").value;
+
+      const bookingRef = "TBL-" + Math.floor(10000 + Math.random() * 90000);
+
+      DOM.successVoucherContent.innerHTML = `
+        <div class="voucherStamp">🍽️</div>
+        <h3 style="font-family:var(--font-serif);font-size:1.6rem;margin-bottom:6px;">Table Reserved Successfully!</h3>
+        <p style="color:var(--text-muted);font-size:0.92rem;">We are delighted to host you, <strong>${name}</strong>. Your table is guaranteed.</p>
+
+        <div class="voucherIdBadge">PASS REF: ${bookingRef}</div>
+
+        <div class="voucherDetailsGrid">
+          <div>
+            <span>Guest Name</span>
+            <strong>${name}</strong>
+          </div>
+          <div>
+            <span>Contact Phone</span>
+            <strong>+91 ${phone}</strong>
+          </div>
+          <div>
+            <span>Location</span>
+            <strong>${branch}</strong>
+          </div>
+          <div>
+            <span>Table Party</span>
+            <strong>${guests} Guests</strong>
+          </div>
+          <div>
+            <span>Date &amp; Time</span>
+            <strong>${date} at ${time}</strong>
+          </div>
+          <div>
+            <span>Seating Preference</span>
+            <strong>${seating}</strong>
+          </div>
+        </div>
+
+        <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:20px;">
+          A confirmation SMS &amp; WhatsApp voucher has been dispatched to your mobile number.
+        </p>
+
+        <div class="voucherActions">
+          <button class="btn btnPrimary" onclick="DOM.confirmationModal.classList.remove('open');">
+            <span>Close Pass</span>
+          </button>
+          <a href="https://wa.me/919876543210?text=Hi%20Masala%20Caf%C3%A9%2C%20I%20have%20booked%20a%20table%20(${bookingRef})%20for%20${encodeURIComponent(name)}%20on%20${date}%20at%20${encodeURIComponent(time)}.%20Looking%20forward%20to%20dining!" target="_blank" class="btn btnOutline">
+            <span>Share on WhatsApp 💬</span>
+          </a>
+        </div>
+      `;
+
+      DOM.confirmationModal.classList.add("open");
+      DOM.diningForm.reset();
+      setupDateLimits();
+      showToast("Table reservation confirmed! ✨");
+    }
+
+    function handleHotelSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("hotelName").value.trim();
+      const phone = document.getElementById("hotelPhone").value.trim();
+      const propertyKey = DOM.hotelPropertySelect.value;
+      const hotelObj = HOTELS_DATA.find(h => h.id === propertyKey) || HOTELS_DATA[0];
+      const roomType = DOM.hotelRoomTypeSelect.value;
+      const checkIn = DOM.hotelCheckInInput.value;
+      const checkOut = DOM.hotelCheckOutInput.value;
+      const guests = document.getElementById("hotelGuests").value;
+      const plan = document.getElementById("hotelPlan").value;
+
+      const stayRef = "STAY-" + Math.floor(10000 + Math.random() * 90000);
+
+      DOM.successVoucherContent.innerHTML = `
+        <div class="voucherStamp">🏰</div>
+        <h3 style="font-family:var(--font-serif);font-size:1.6rem;margin-bottom:6px;">Hotel Stay Booked Successfully!</h3>
+        <p style="color:var(--text-muted);font-size:0.92rem;">Your luxury getaway at <strong>${hotelObj.name}</strong> is confirmed!</p>
+
+        <div class="voucherIdBadge">BOOKING ID: ${stayRef}</div>
+
+        <div class="voucherDetailsGrid">
+          <div>
+            <span>Guest Name</span>
+            <strong>${name}</strong>
+          </div>
+          <div>
+            <span>Phone Number</span>
+            <strong>+91 ${phone}</strong>
+          </div>
+          <div>
+            <span>Boutique Property</span>
+            <strong>${hotelObj.name}</strong>
+          </div>
+          <div>
+            <span>Room Tier</span>
+            <strong>${roomType}</strong>
+          </div>
+          <div>
+            <span>Check-In Date</span>
+            <strong>${checkIn} (From 2:00 PM)</strong>
+          </div>
+          <div>
+            <span>Check-Out Date</span>
+            <strong>${checkOut} (Until 11:00 AM)</strong>
+          </div>
+          <div>
+            <span>Party Details</span>
+            <strong>${guests}</strong>
+          </div>
+          <div>
+            <span>Meal Plan</span>
+            <strong>${plan.split("-")[0]}</strong>
+          </div>
+        </div>
+
+        <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:20px;">
+          Zero cancellation charges apply up to 48 hours before check-in. Our luxury concierge will contact you for arrival timings.
+        </p>
+
+        <div class="voucherActions">
+          <button class="btn btnPrimary" onclick="DOM.confirmationModal.classList.remove('open');">
+            <span>Close Pass</span>
+          </button>
+          <a href="https://wa.me/919876543210?text=Hi%20Masala%20Boutique%20Hotels%2C%20I%20have%20reserved%20a%20stay%20(${stayRef})%20at%20${encodeURIComponent(hotelObj.name)}%20for%20${encodeURIComponent(name)}%20from%20${checkIn}%20to%20${checkOut}." target="_blank" class="btn btnOutline">
+            <span>Send to Concierge 💬</span>
+          </a>
+        </div>
+      `;
+
+      DOM.confirmationModal.classList.add("open");
+      DOM.hotelForm.reset();
+      setupDateLimits();
+      showToast("Hotel stay reservation confirmed! 🏰");
+    }
+
+    function renderReviews() {
+      if (!DOM.reviewsGrid) return;
+
+      DOM.reviewsGrid.innerHTML = REVIEWS_DATA.map(rev => `
+        <div class="reviewCard">
+          <div class="reviewHeader">
+            <div class="reviewStars">${"★".repeat(rev.rating)}</div>
+            <span class="reviewTypeTag">${rev.type}</span>
+          </div>
+          <p class="reviewText">"${rev.text}"</p>
+          <div class="reviewAuthorRow">
+            <div class="authorAvatar">${rev.name.charAt(0)}</div>
+            <div class="authorMeta">
+              <strong>${rev.name}</strong>
+              <small>${rev.location} • ${rev.time}</small>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function updateStarPickerUI(val) {
+      const stars = DOM.starPicker.querySelectorAll(".starPick");
+      stars.forEach(s => {
+        const starVal = parseInt(s.dataset.rating, 10);
+        s.classList.toggle("active", starVal <= val);
+      });
+    }
+
+    function handleReviewSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("revName").value.trim();
+      const cat = document.getElementById("revCategory").value;
+      const branch = document.getElementById("revBranch").value;
+      const text = document.getElementById("revComments").value.trim();
+
+      const newReview = {
+        name: name,
+        type: cat,
+        rating: state.starRatingSelected,
+        location: branch,
+        time: "Just now",
+        text: text
+      };
+
+      REVIEWS_DATA.unshift(newReview);
+      renderReviews();
+
+      DOM.submitReviewForm.reset();
+      DOM.reviewModal.classList.remove("open");
+      showToast("Thank you! Your verified review has been published ⭐");
+    }
+
+    function renderBranchDetails(branchId) {
+      const hotel = HOTELS_DATA.find(h => h.id === branchId) || HOTELS_DATA[0];
+
+      DOM.branchDetailsBox.innerHTML = `
+        <div class="subBadge">FLAGSHIP LOCATION &amp; HOTEL</div>
+        <h3 class="locTitle">${hotel.name}</h3>
+        <div class="locTagline">${hotel.tag} • ${hotel.city}</div>
+
+        <div class="locDetailsList">
+          <div class="locDetailItem">
+            <span class="locIcon">📍</span>
+            <div>
+              <strong>Address</strong>
+              <span>${hotel.address}</span>
+            </div>
+          </div>
+          <div class="locDetailItem">
+            <span class="locIcon">⏰</span>
+            <div>
+              <strong>Operating Hours</strong>
+              <span>${hotel.hours}</span>
+            </div>
+          </div>
+          <div class="locDetailItem">
+            <span class="locIcon">📞</span>
+            <div>
+              <strong>Direct Concierge &amp; Reservations</strong>
+              <span>${hotel.phone}</span>
+            </div>
+          </div>
+          <div class="locDetailItem">
+            <span class="locIcon">🛎️</span>
+            <div>
+              <strong>Property Highlights</strong>
+              <span>${hotel.amenities.slice(0, 4).join(" • ")}</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:auto;">
+          <a href="https://maps.google.com/?q=${encodeURIComponent(hotel.address)}" target="_blank" rel="noopener noreferrer" class="btn btnPrimary">
+            <span>Get Driving Directions</span>
+            <span class="btnArrow">→</span>
+          </a>
+          <button class="btn btnOutline" onclick="bookThisHotel('${hotel.id}')">Reserve At This Location</button>
+        </div>
+      `;
+
+      DOM.googleMapFrame.src = `https://maps.google.com/maps?q=${encodeURIComponent(hotel.address)}&t=&z=14&ie=UTF8&iwloc=&output=embed`;
+    }
+
+    function showToast(message) {
+      if (!DOM.toastContainer) return;
+
+      const toast = document.createElement("div");
+      toast.className = "toast";
+      toast.innerHTML = `<span>${message}</span>`;
+
+      DOM.toastContainer.appendChild(toast);
+
+      window.setTimeout(() => {
+        toast.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+        toast.style.opacity = "0";
+        toast.style.transform = "translateX(100%)";
+        window.setTimeout(() => toast.remove(), 320);
+      }, 3500);
+    }
+
+    window.showToast = showToast;
+    window.openHotelDetails = openHotelDetails;
+    window.bookThisHotel = bookThisHotel;
+    window.addToCart = addToCart;
+    window.updateCartQty = updateCartQty;
+    window.resetMenuFilters = resetMenuFilters;
+    window.updateRoomTypesBasedOnHotel = updateRoomTypesBasedOnHotel;
+  </script>
+</body>
+</html>
